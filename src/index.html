@@ -1460,7 +1460,7 @@
 
     <script>
         // 硬件数据库
-        const hardwareData = {
+        let hardwareData = {
             cpu: [
                 // AMD Ryzen 9系列
                 { 
@@ -1775,10 +1775,58 @@
         // 当前选中的分类
         let currentCategory = 'cpu';
 
+        // 保存当前应用状态（全量保存，用于持久化和导入覆盖）
+        function saveAppState() {
+            try {
+                // 保存全量硬件数据库
+                localStorage.setItem('fullHardwareData', JSON.stringify(hardwareData));
+                // 保存自定义硬件数据库（虽然包含在硬件操作中，但也单独存一份以防万一，或者统一合并）
+                // 注意：如果 customHardwareData 里的内容也混在 hardwareData.other 里，可能会重复，
+                // 但根据现有逻辑，other 分类和其他分类是分开的。
+                // 这里的策略是：hardwareData 包含了所有分类（包括 other 里的自定义硬件吗？看代码逻辑似乎是分开的）
+                // 检查代码：customHardwareData 是单独的数组。hardwareData 是对象。
+                // 假如 hardwareData.other 存在，那它就是 mixed。
+                // 简单起见，我们保存所有核心状态。
+                localStorage.setItem('customHardwareData', JSON.stringify(customHardwareData));
+                
+                // 保存当前配置单
+                localStorage.setItem('savedCurrentConfig', JSON.stringify(currentConfig));
+                
+                console.log('应用状态已保存');
+            } catch (error) {
+                console.error('保存应用状态失败:', error);
+            }
+        }
+
         // 初始化
         function init() {
             try {
                 console.log('开始初始化应用...');
+                
+                // 1. 尝试加载全量硬件数据（持久化记忆）
+                const savedFullData = localStorage.getItem('fullHardwareData');
+                if (savedFullData) {
+                    try {
+                        hardwareData = JSON.parse(savedFullData);
+                        console.log('已从本地存储加载全量硬件数据');
+                    } catch (e) {
+                        console.error('解析本地硬件数据失败，使用默认数据', e);
+                    }
+                }
+
+                // 2. 加载自定义配件数据
+                loadCustomHardwareData();
+
+                // 3. 加载上次的配置单（记忆功能）
+                const savedConfig = localStorage.getItem('savedCurrentConfig');
+                if (savedConfig) {
+                    try {
+                        currentConfig = JSON.parse(savedConfig);
+                        console.log('已恢复上次的配置单');
+                    } catch (e) {
+                        console.error('解析上次配置单失败', e);
+                    }
+                }
                 
                 // 确保硬件数据库存在
                 if (typeof hardwareData === 'undefined') {
@@ -2063,6 +2111,7 @@
             currentConfig[item.category] = itemCopy;
             renderHardwareList(item.category);
             updateSummary();
+            saveAppState(); // 保存状态
         }
 
         // 设置搜索功能
@@ -2100,16 +2149,24 @@
             const results = [];
             
             Object.keys(hardwareData).forEach(category => {
-                hardwareData[category].forEach(item => {
-                    if (item.name.toLowerCase().includes(query) || 
-                        item.brand.toLowerCase().includes(query) ||
-                        item.specs.toLowerCase().includes(query)) {
-                        results.push({...item, category});
-                    }
-                });
+                if (Array.isArray(hardwareData[category])) {
+                    hardwareData[category].forEach(item => {
+                        // 确保属性存在再调用toLowerCase
+                        const name = item.name ? item.name.toLowerCase() : '';
+                        const brand = item.brand ? item.brand.toLowerCase() : '';
+                        const specs = item.specs ? item.specs.toLowerCase() : '';
+                        
+                        if (name.includes(query) || 
+                            brand.includes(query) ||
+                            specs.includes(query)) {
+                            results.push({...item, category});
+                        }
+                    });
+                }
             });
             
-            return results.slice(0, 10); // 限制显示10个结果
+            // 增加结果数量限制，从10改为100，解决搜索不到部分硬件的问题
+            return results.slice(0, 100); 
         }
 
         // 显示搜索建议
@@ -2373,6 +2430,7 @@
                 console.log('重新渲染硬件列表，分类:', category);
                 renderHardwareList(category);
                 updateSummary();
+                saveAppState(); // 保存状态
                 
                 console.log('添加/编辑硬件操作完成');
             } catch (error) {
@@ -2456,6 +2514,7 @@
             // 重新渲染列表和摘要
             renderHardwareList(category);
             updateSummary();
+            saveAppState(); // 保存状态
         }
 
         // 编辑硬件（支持所有分类和自定义硬件）
@@ -2547,6 +2606,7 @@
                 itemCopy.quantity = item.quantity || 1;
                 currentConfig.other.push(itemCopy);
                 updateSummary();
+                saveAppState(); // 保存状态
                 console.log(`"${item.name}" 已添加到当前配置！`);
             }
         }
@@ -2923,6 +2983,7 @@
                 console.log('已移除:', itemToRemove.name);
                 // 更新摘要
                 updateSummary();
+                saveAppState(); // 保存状态
                 
                 // 如果当前正在查看该分类，重新渲染列表以更新选中状态
                 if (currentCategory === category) {
@@ -3020,6 +3081,7 @@
                 form.reset();
                 // 更新摘要
                 updateSummary();
+                saveAppState(); // 保存状态
                 // 如果当前正在查看该分类，重新渲染列表以更新显示
                 if (currentCategory === category) {
                     renderHardwareList(category);
@@ -3055,6 +3117,7 @@
                 
                 // 更新摘要面板
                 updateSummary();
+                saveAppState(); // 保存状态
                 
                 console.log('清空当前配置完成');
                 alert('当前配置已成功清空！右侧面板中的所有硬件选择已清除。');
@@ -3151,39 +3214,55 @@
                     
                     // 确认是否覆盖现有数据
                     if (confirm('确定要导入数据吗？这将覆盖当前的所有数据，包括已选择的硬件配置和自定义硬件。')) {
-                        // 备份当前数据（可选）
-                        const backupData = {
-                            hardwareData: hardwareData,
-                            currentConfig: currentConfig,
-                            presetConfigs: presetConfigs,
-                            customHardwareData: customHardwareData
-                        };
-                        
                         try {
-                            // 恢复所有数据
+                            // 全量覆盖数据
+                            // 1. 恢复硬件数据库（直接全量覆盖）
                             if (importData.hardwareData) {
-                                Object.keys(importData.hardwareData).forEach(category => {
-                                    hardwareData[category] = importData.hardwareData[category] || [];
+                                hardwareData = JSON.parse(JSON.stringify(importData.hardwareData));
+                                
+                                // 兼容性处理：如果导入的数据中没有某些分类的数组，初始化为空数组
+                                const categories = ['cpu', 'motherboard', 'ram', 'gpu', 'cooling', 'storage', 'psu', 'case', 'fans', 'other'];
+                                categories.forEach(cat => {
+                                    if (!hardwareData[cat]) {
+                                        hardwareData[cat] = [];
+                                    }
                                 });
                             }
                             
+                            // 2. 恢复当前配置
                             if (importData.currentConfig) {
                                 currentConfig = JSON.parse(JSON.stringify(importData.currentConfig));
+                                
+                                // 兼容性处理：确保 currentConfig 包含所有必要字段
+                                const configKeys = ['cpu', 'motherboard', 'ram', 'gpu', 'cooling', 'storage', 'psu', 'case', 'fans', 'other'];
+                                configKeys.forEach(key => {
+                                    if (currentConfig[key] === undefined) {
+                                        if (key === 'other') {
+                                            currentConfig[key] = [];
+                                        } else {
+                                            currentConfig[key] = null;
+                                        }
+                                    }
+                                });
                             }
                             
+                            // 3. 恢复预设配置
                             if (importData.presetConfigs) {
                                 presetConfigs = JSON.parse(JSON.stringify(importData.presetConfigs));
                                 savePresetConfigs();
                             }
                             
+                            // 4. 恢复自定义硬件数据
                             if (importData.customHardwareData) {
                                 customHardwareData = JSON.parse(JSON.stringify(importData.customHardwareData));
-                                saveCustomHardwareData();
                             }
                             
-                            if (importData.modifiedHardware) {
-                                localStorage.setItem('modifiedHardware', JSON.stringify(importData.modifiedHardware));
-                            }
+                            // 关键：保存应用状态（全量保存）
+                            saveAppState();
+                            
+                            // 清除旧的局部存储（防止冲突，或者可选保留）
+                            // localStorage.removeItem('modifiedHardware'); 
+                            // 保持 modifiedHardware 可能有助于兼容，但既然全量覆盖了，其实不需要了。
                             
                             if (importData.savedConfigs) {
                                 localStorage.setItem('pcConfigs', JSON.stringify(importData.savedConfigs));
@@ -3193,19 +3272,17 @@
                             loadCategory(currentCategory);
                             updateSummary();
                             
-                            console.log('数据导入成功:', importData);
-                            alert('数据导入成功！所有配置已恢复。');
-                            
-                        } catch (restoreError) {
-                            console.error('恢复数据时出错:', restoreError);
-                            // 尝试恢复备份（可选）
-                            alert('导入数据时出现错误，请检查文件格式是否正确。');
+                            console.log('数据导入成功');
+                            alert('数据导入成功！页面将刷新以确保所有更改生效。');
+                            location.reload(); // 刷新页面最稳妥
+                        } catch (err) {
+                            console.error('应用导入数据时出错:', err);
+                            alert('导入数据时出错，请检查文件格式。');
                         }
                     }
-                    
-                } catch (parseError) {
-                    console.error('解析JSON文件时出错:', parseError);
-                    alert('无法解析文件，请确保选择的是有效的DIY装机助手数据文件。');
+                } catch (error) {
+                    console.error('解析数据文件失败:', error);
+                    alert('无法解析数据文件，请确保文件格式正确。');
                 }
             };
             
