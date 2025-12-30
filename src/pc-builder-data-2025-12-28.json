@@ -1,0 +1,6319 @@
+{
+  "hardwareData": {
+    "cpu": [
+      {
+        "id": "cpu-1",
+        "name": "AMD Ryzen 9 9950X3D",
+        "price": 4499,
+        "quantity": 1,
+        "specs": "16核32线程 | 5.7GHz | 128MB缓存 | AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "cpu-2",
+        "name": "AMD Ryzen 9 9950X",
+        "price": 3177,
+        "specs": "16核32线程 | 5.7GHz | 64MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-3",
+        "name": "AMD Ryzen 9 7950X3D",
+        "price": 2999,
+        "specs": "16核32线程 | 5.0GHz | 144MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-4",
+        "name": "Intel 酷睿 Ultra 9 285K",
+        "price": 3411,
+        "specs": "24核24线程 | 5.7GHz | 36MB缓存 | LGA1851接口",
+        "brand": "Intel",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-5",
+        "name": "Intel 酷睿 i9 14900KF",
+        "price": 2829,
+        "specs": "24核32线程 | 5.8GHz | 36MB缓存 | LGA1700接口",
+        "brand": "Intel",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-6",
+        "name": "AMD Ryzen 7 9800X3D",
+        "price": 2866,
+        "specs": "8核16线程|5.2GHz| 128MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-7",
+        "name": "AMD Ryzen 7 7800X3D",
+        "price": 1968,
+        "specs": "8核16线程 | 5.0GHz | 104MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-8",
+        "name": "Intel 酷睿 i7 14700KF",
+        "price": 2199,
+        "specs": "20核28线程 | 5.6GHz | 33MB缓存 | LGA1700接口",
+        "brand": "Intel",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-9",
+        "name": "AMD Ryzen 5 9600X",
+        "price": 1271,
+        "specs": "6核12线程 | 5.4GHz | 32MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-10",
+        "name": "AMD Ryzen 5 7600X",
+        "price": 1110,
+        "specs": "6核12线程 | 5.3GHz | 32MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "custom-1766670417264",
+        "name": "AMD Ryzen 9 9700X",
+        "price": 1659,
+        "quantity": 1,
+        "specs": "8核16线程  5.5GHz  AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766671214725",
+        "name": "AMD Ryzen 7 7700",
+        "price": 1359,
+        "quantity": 1,
+        "specs": "8核16线程  5.3GHz  AM5",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766816675784",
+        "name": "AMD  R5  7500F",
+        "price": 789,
+        "quantity": 1,
+        "specs": "6核心12线程基础频率3.7加速频率5.0 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766817498862",
+        "name": "AMD  R7  5700X",
+        "price": 969,
+        "quantity": 1,
+        "specs": "8核心16线程 基础频率3.4 动态频率4.6 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766817681882",
+        "name": "AMD  R5  5600",
+        "price": 709,
+        "quantity": 1,
+        "specs": "6核心12线程 基础频率3.7 加速频率4.4 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766817819092",
+        "name": "AMD  R5  5600X",
+        "price": 766,
+        "quantity": 1,
+        "specs": "6核12线程 基础频率3.5 加速频率4.5 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766817915661",
+        "name": "AMD  R5  9500F",
+        "price": 1129,
+        "quantity": 1,
+        "specs": "6核心12线程 基础频率3.8 加速频率5.0 AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909222388",
+        "name": "9800X3D盒装",
+        "price": 3000,
+        "quantity": 1,
+        "specs": "8核16线程|5.2GHz| 128MB缓存 | AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909315220",
+        "name": "AMD 9700X盒装",
+        "price": 1689,
+        "quantity": 1,
+        "specs": "8核心16线程5.5  AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909421292",
+        "name": "AMD 9900X 盒装",
+        "price": 3060,
+        "quantity": 1,
+        "specs": "AM5",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909465369",
+        "name": "AMD 9950X 盒装",
+        "price": 3699,
+        "quantity": 1,
+        "specs": "AM5 主打生产力",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909538900",
+        "name": "AMD 9950X3D 全新盒装",
+        "price": 4999,
+        "quantity": 1,
+        "specs": "AM5 游戏生产力",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909628237",
+        "name": "AMD 9600X 全新盒装",
+        "price": 1273,
+        "quantity": 1,
+        "specs": "AM5",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909720346",
+        "name": "Intel 酷睿 Ultra 265K全新盒装",
+        "price": 1800,
+        "quantity": 1,
+        "specs": "20核心20线程",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909746782",
+        "name": "Intel 酷睿 Ultra 265KF全新盒装",
+        "price": 1700,
+        "quantity": 1,
+        "specs": "20核心20线程",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1767093018968",
+        "name": "1",
+        "price": 1,
+        "quantity": 1,
+        "specs": "1",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      }
+    ],
+    "motherboard": [
+      {
+        "id": "mb-1",
+        "name": "微星刀锋钛 B850I EDGE TI WIFI 白色",
+        "price": 1522,
+        "specs": "ITX | 8+2+1直连供电 | DDR5 | Wi-Fi 7",
+        "brand": "微星",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-2",
+        "name": "微星战斧导弹B850TOMAHAWKMAX 黑色",
+        "price": 1655,
+        "specs": "ATX | B850芯片组 | DDR5 |14+2+1供电",
+        "brand": "微星",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-3",
+        "name": "技嘉 B850I AORUS ULTRA",
+        "price": 1999,
+        "specs": "Mini-ITX | B850芯片组 | DDR5 | Wi-Fi 7",
+        "brand": "技嘉",
+        "category": "motherboard"
+      },
+      {
+        "id": "mb-4",
+        "name": "华硕 ROG B650E-E GAMING WIFI 黑",
+        "price": 1569,
+        "specs": "mATX | B850芯片组 | DDR5 | Wi-Fi 7",
+        "brand": "华硕",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-5",
+        "name": "华硕 ROG Z790-A GAMING WIFI S 吹雪 白",
+        "price": 1679,
+        "specs": "ATX | Z790芯片组 | DDR4 | Wi-Fi 6E",
+        "brand": "华硕",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-6",
+        "name": "微星 MPG Z790 EDGE WIFI  白",
+        "price": 1269,
+        "specs": "ATX | Z790芯片组 | DDR5 | Wi-Fi 6E",
+        "brand": "微星",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "custom-1766818190423",
+        "name": "微星迫击炮B850M MORTAR WIFI7 黑",
+        "price": 1211,
+        "quantity": 1,
+        "specs": "MATX 12+2+1供电 8层pcb pcie5.0插槽 显卡快拆设计",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766818647261",
+        "name": "技嘉B850M小雕 黑色",
+        "price": 1211,
+        "quantity": 1,
+        "specs": "MATX 12+4相供电 WIFI7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766821623972",
+        "name": "微星B850MPOWER 黑",
+        "price": 1411,
+        "quantity": 1,
+        "specs": "MATX 12+2+1相供电 异步外频",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822033239",
+        "name": "微星B850M GAMING Plus WIFI 白",
+        "price": 999,
+        "quantity": 1,
+        "specs": "MATX 10+2+1供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822157484",
+        "name": "华硕TUFB850-PLUS二代 黑色",
+        "price": 1277,
+        "quantity": 1,
+        "specs": "MATX  14+2+1相供电  WiFi 7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822183858",
+        "name": "华硕TUFB850-PLUS二代 白色",
+        "price": 1299,
+        "quantity": 1,
+        "specs": "MATX 14+2+1相供电  WiFi 7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822279204",
+        "name": "华硕B850M AYW 白",
+        "price": 873,
+        "quantity": 1,
+        "specs": "MATX 8+2+1相供电  WiFi 6",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822409549",
+        "name": "华硕B850M AYW OC 白",
+        "price": 1339,
+        "quantity": 1,
+        "specs": "MATX 12+2+1相供电WiFi7 异步外频",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822523200",
+        "name": "七彩虹B850M战列舰v14",
+        "price": 900,
+        "quantity": 1,
+        "specs": "MATX 10+2+1相供电  Pcie 5.0",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822688169",
+        "name": "微星刀锋钛 B850 EDGE TI 白",
+        "price": 1669,
+        "quantity": 1,
+        "specs": "ATX 14+2+1供电 显卡快拆设计",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822804585",
+        "name": "技嘉B850M AORUS 冰雕 白",
+        "price": 1211,
+        "quantity": 1,
+        "specs": "MATX 12+2+2供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822931170",
+        "name": "华硕 B850-G GAMING WIFI S小吹雪 白",
+        "price": 1379,
+        "quantity": 1,
+        "specs": "MATX 14+2+1供电 八层PCB",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823187898",
+        "name": "技嘉 B850M 魔鹰X  WiFi6E 黑",
+        "price": 1138,
+        "quantity": 1,
+        "specs": "MATX 10+2+2供电 显卡快拆",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823394810",
+        "name": "七彩虹B850M-MEOW WIFI7 V14橘猫 白",
+        "price": 899,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823578180",
+        "name": "技嘉B850M电竞雕 黑",
+        "price": 1359,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823679335",
+        "name": "华硕 B650M-AYW WIFI 白",
+        "price": 779,
+        "quantity": 1,
+        "specs": "MATX 6+2+1供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766823768328",
+        "name": "华硕天选 B850M GAMING 白",
+        "price": 1199,
+        "quantity": 1,
+        "specs": "MATX 10+2+1相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823891810",
+        "name": "技嘉 B850M FORCE战鹰 白黄相间",
+        "price": 811,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824113534",
+        "name": "华硕 TUFB850-BTFWIFI W背插主板 白色",
+        "price": 1589,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824305621",
+        "name": "微星 B650M APE 背插主板 白",
+        "price": 839,
+        "quantity": 1,
+        "specs": "MATX 无显卡供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824533388",
+        "name": "微星B850 GAMING Plus WIFI 白",
+        "price": 1329,
+        "quantity": 1,
+        "specs": "ATX大板 12+2+1供电  WiFi 7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766824870835",
+        "name": "铭瑄B650ITX WIFI ICE 白",
+        "price": 699,
+        "quantity": 1,
+        "specs": "ITX 6+2+1相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824905139",
+        "name": "华硕B850-I GAMING W迷你吹雪 白",
+        "price": 2422,
+        "quantity": 1,
+        "specs": "ITX 10+3+1相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824983760",
+        "name": "华擎 B850I PG 闪电风暴",
+        "price": 1699,
+        "quantity": 1,
+        "specs": "MATX 10+1+1相供电  Pcie5.0插槽",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766825157750",
+        "name": "铭瑄B550M GAMING 白",
+        "price": 511,
+        "quantity": 1,
+        "specs": "MATX 双满速m.2接口 支持ARGB",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766825237231",
+        "name": "微星迫击炮 B550M MORTAR WIFI 黑",
+        "price": 677,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766825312585",
+        "name": "华硕 B550M-PLUS重炮手 黑",
+        "price": 711,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826086572",
+        "name": "精粤B650M-D  主板黑 马甲白",
+        "price": 431,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826155647",
+        "name": "精粤B650M GAMING PLUS 白",
+        "price": 535,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826262375",
+        "name": "精粤B650M雪梦 白",
+        "price": 651,
+        "quantity": 1,
+        "specs": "MATX 19相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826338989",
+        "name": "精粤B650M雪之梦WIFI 白",
+        "price": 699,
+        "quantity": 1,
+        "specs": "MATX 19相供电  WiFi 6",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766852371190",
+        "name": "微星B650M GAMING WIFI",
+        "price": 699,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909834553",
+        "name": "华硕z890-p WIFI D5",
+        "price": 1358,
+        "quantity": 1,
+        "specs": "MATX DDR5",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909887552",
+        "name": "微星z890战斧导弹WiFi",
+        "price": 1534,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      }
+    ],
+    "ram": [
+      {
+        "id": "custom-1766670594928",
+        "name": "雷克沙6000-32  黑",
+        "price": 959,
+        "quantity": 1,
+        "specs": "单条16g  无光版本",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826441500",
+        "name": "光威天策 皓月白",
+        "price": 589,
+        "quantity": 1,
+        "specs": "单条16 3200-18-1.35V",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826484487",
+        "name": "光威天策 皓月白",
+        "price": 1129,
+        "quantity": 1,
+        "specs": "16X2 3200-18-1.35V",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826632115",
+        "name": "玖合玲珑6000-28 海力士a代颗粒  白",
+        "price": 2011,
+        "quantity": 1,
+        "specs": "双条16g 无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826673752",
+        "name": "玖合玲珑6000-28 海力士a代颗粒 白",
+        "price": 2211,
+        "quantity": 1,
+        "specs": "双条16g ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826858050",
+        "name": "绫龙6000-36  黑白",
+        "price": 1999,
+        "quantity": 1,
+        "specs": "无光24×2 美光颗粒",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826901159",
+        "name": "绫龙6000-36  黑白",
+        "price": 1744,
+        "quantity": 1,
+        "specs": "南亚颗粒 16×2 无光版本 颜色可选",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826953631",
+        "name": "绫龙6000-28  黑白",
+        "price": 1999,
+        "quantity": 1,
+        "specs": "海力士a代单面颗粒 16×2 颜色可选",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827029303",
+        "name": "雷克沙 雷神之锤 6000c36 黑白",
+        "price": 899,
+        "quantity": 1,
+        "specs": "国产颗粒 单条16无光版本",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766827110973",
+        "name": "金百达星刃 6000 28 黑白",
+        "price": 2411,
+        "quantity": 1,
+        "specs": "16×2海力士a代颗粒无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827182706",
+        "name": "金百达银爵 6000c36 黑白",
+        "price": 1994,
+        "quantity": 1,
+        "specs": "16×2 海力士m代颗粒 无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827252426",
+        "name": "金百达黑刃 6000c36 黑",
+        "price": 1988,
+        "quantity": 1,
+        "specs": "海力士m代颗粒 16×2无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827326592",
+        "name": "宏基掠夺者冰刃系列6000 28黑白",
+        "price": 2301,
+        "quantity": 1,
+        "specs": "海力士a代颗粒ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766827456837",
+        "name": "宏基炫光星舰 6000c28 黑",
+        "price": 2301,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 16×2 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827606620",
+        "name": "百维hx100 6000c36 银色",
+        "price": 1911,
+        "quantity": 1,
+        "specs": "16×2 海力士m代 无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827687696",
+        "name": "光威龙武 6400c32 黑",
+        "price": 1883,
+        "quantity": 1,
+        "specs": "16×2 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827756250",
+        "name": "皇家戟6000c28银色",
+        "price": 2703,
+        "quantity": 1,
+        "specs": "16×2  ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827864959",
+        "name": "玖合异刃6000c28 黑色无光",
+        "price": 1983,
+        "quantity": 1,
+        "specs": "16×2双条无光 海力士a代颗粒",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827964875",
+        "name": "机械师星辰 6000c28 黑白银",
+        "price": 2431,
+        "quantity": 1,
+        "specs": "24×2 海力士新m代颗粒 ARGB光效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766830848024",
+        "name": "挚科巨浪6000c38 黑",
+        "price": 1609,
+        "quantity": 1,
+        "specs": "国产颗粒 16×2无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766830959988",
+        "name": "威刚 D300-6400c32黑色无光",
+        "price": 1888,
+        "quantity": 1,
+        "specs": "32×1 A代颗粒",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831085934",
+        "name": "威刚龙耀D500G-6000-26 黑白",
+        "price": 2501,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831262367",
+        "name": "金百达星刃 8000c36 黑",
+        "price": 2519,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 16×2 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831363003",
+        "name": "玖合异刃6800c34 无光版本",
+        "price": 1992,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 16×2",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831463215",
+        "name": "雷克沙战神之翼 6000c28 黑",
+        "price": 2309,
+        "quantity": 1,
+        "specs": "16×2海力士a代颗粒 ARGB",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831587083",
+        "name": "科摩斯承影机甲6000c28 黑白",
+        "price": 1319,
+        "quantity": 1,
+        "specs": "24×1 海力士新m代ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831650426",
+        "name": "海拉8g单条 6000C28海力士a代 黑",
+        "price": 709,
+        "quantity": 1,
+        "specs": "无光版本 8×1",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831746831",
+        "name": "阿斯加特 雷神索尔8000c40 黑色无光",
+        "price": 1419,
+        "quantity": 1,
+        "specs": "海力士m代 24×1",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831893090",
+        "name": "光威神策 6800 c 34 白",
+        "price": 1219,
+        "quantity": 1,
+        "specs": "24×1",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831982238",
+        "name": "腾隐6000-42",
+        "price": 999,
+        "quantity": 1,
+        "specs": "24×1单条黑色无马甲",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766832155101",
+        "name": "阿斯加特海拉 6000c36",
+        "price": 999,
+        "quantity": 1,
+        "specs": "24×1  白色无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      }
+    ],
+    "gpu": [
+      {
+        "id": "gpu-1",
+        "name": "华硕 TUF NVIDIA RTX 5090  32G满血 黑",
+        "price": 22540,
+        "specs": "32GB GDDR7",
+        "brand": "NVIDIA",
+        "category": "gpu",
+        "isModified": true
+      },
+      {
+        "id": "gpu-3",
+        "name": "AMD RX 7900 XTX",
+        "price": 7999,
+        "specs": "24GB GDDR6 | 96 CU | 2.5GHz",
+        "brand": "AMD",
+        "category": "gpu"
+      },
+      {
+        "id": "custom-1766670639490",
+        "name": "电竞叛客5060X2W 8G双风扇白色",
+        "price": 2323,
+        "quantity": 1,
+        "specs": "8pin供电接口 长245MM",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766671453089",
+        "name": "双敏5050 双风扇  白",
+        "price": 1799,
+        "quantity": 1,
+        "specs": "推荐电源 550W 长230",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766834990834",
+        "name": "映众5060耀夜x2 双风扇黑色",
+        "price": 2367,
+        "quantity": 1,
+        "specs": "长225",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835085921",
+        "name": "万历5060星云 8g 黑色双风扇",
+        "price": 2299,
+        "quantity": 1,
+        "specs": "长211MM",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835182672",
+        "name": "技嘉5060OC 风魔 黑色",
+        "price": 2373,
+        "quantity": 1,
+        "specs": "双风扇 长222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835246230",
+        "name": "铭轩终结者5060 黑白双风扇",
+        "price": 2331,
+        "quantity": 1,
+        "specs": "长222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835316677",
+        "name": "七彩虹5060战斧豪华版三风扇 黑",
+        "price": 2499,
+        "quantity": 1,
+        "specs": "长310",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835390245",
+        "name": "影驰5060OC魔刃 三风扇黑色",
+        "price": 2509,
+        "quantity": 1,
+        "specs": "长316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835432031",
+        "name": "影驰5060OC圣刃 V2白色三风扇",
+        "price": 2509,
+        "quantity": 1,
+        "specs": "长316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835474332",
+        "name": "影驰金属大师 5060黑金v2oc 三风扇黑色",
+        "price": 2559,
+        "quantity": 1,
+        "specs": "长320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835527093",
+        "name": "影驰金属大师 5060 v2 oc 三风扇白色",
+        "price": 2559,
+        "quantity": 1,
+        "specs": "长320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835578947",
+        "name": "微星5060幻影 双风扇黑色",
+        "price": 2378,
+        "quantity": 1,
+        "specs": "长211",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835695208",
+        "name": "铭瑄5060 OC 电竞之心 黑色三风扇",
+        "price": 2475,
+        "quantity": 1,
+        "specs": "长320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835795708",
+        "name": "技嘉5060猎鹰MAX三风扇 黑色",
+        "price": 2511,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835849489",
+        "name": "耕升5060 8g 幽灵 双风扇黑色",
+        "price": 2279,
+        "quantity": 1,
+        "specs": "长262",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835921419",
+        "name": "微星5060幻影师OC 黑色双风扇",
+        "price": 2388,
+        "quantity": 1,
+        "specs": "长211",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836122716",
+        "name": "铭轩5060OC 璦珈 三风扇 白 流光灯效",
+        "price": 2514,
+        "quantity": 1,
+        "specs": "长319",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836180164",
+        "name": "索泰5060OC月影 白色三风扇",
+        "price": 2438,
+        "quantity": 1,
+        "specs": "长293",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836251486",
+        "name": "盈通5060大地之神 黑色双风扇",
+        "price": 2335,
+        "quantity": 1,
+        "specs": "长270",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836358822",
+        "name": "万丽5060TI 8G 星云 黑色双风扇",
+        "price": 2951,
+        "quantity": 1,
+        "specs": "长239",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836416129",
+        "name": "七彩虹5060ti 战斧 双风扇 黑色",
+        "price": 2971,
+        "quantity": 1,
+        "specs": "231",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836471725",
+        "name": "微星5060TI幻影师 黑色三风扇",
+        "price": 3022,
+        "quantity": 1,
+        "specs": "308",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836536092",
+        "name": "电竞判客 5060TI 双风扇 黑白",
+        "price": 2844,
+        "quantity": 1,
+        "specs": "222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836615169",
+        "name": "映众5060TI耀夜 黑色双风扇",
+        "price": 2899,
+        "quantity": 1,
+        "specs": "222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836693264",
+        "name": "铭瑄5060ti TRB黑色三风扇",
+        "price": 3005,
+        "quantity": 1,
+        "specs": "292",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836770908",
+        "name": "技嘉5060TIOC魔鹰 黑色三风扇",
+        "price": 3121,
+        "quantity": 1,
+        "specs": "281",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836846504",
+        "name": "耕升5060TI 幽灵双风扇黑色",
+        "price": 2855,
+        "quantity": 1,
+        "specs": "262",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836999426",
+        "name": "影驰5060TIOC 魔刃圣刃 黑白三风扇",
+        "price": 3095,
+        "quantity": 1,
+        "specs": "316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837069991",
+        "name": "技嘉5070风魔12G OC 三风扇黑色",
+        "price": 4517,
+        "quantity": 1,
+        "specs": "311",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837125987",
+        "name": "盈通5070 12g 黑色三风扇 D7豪华版",
+        "price": 4449,
+        "quantity": 1,
+        "specs": "290",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837180416",
+        "name": "七彩虹5070战斧独立豪华版 黑色三风扇",
+        "price": 4645,
+        "quantity": 1,
+        "specs": "301",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837237860",
+        "name": "铭瑄5070OC电竞之心",
+        "price": 4571,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837311706",
+        "name": "华硕大师5070OC黑色三风扇",
+        "price": 4593,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837408807",
+        "name": "影驰5070 OC 12G 圣刃 白色三风扇",
+        "price": 4699,
+        "quantity": 1,
+        "specs": "316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837463160",
+        "name": "影驰5070OC12G 金属大师黑金三风扇黑",
+        "price": 4799,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837529907",
+        "name": "影驰5070tiOC16G圣刃魔刃三风扇黑白",
+        "price": 6479,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837586374",
+        "name": "5070电竞叛客 白色三风扇",
+        "price": 4584,
+        "quantity": 1,
+        "specs": "316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837776828",
+        "name": "万丽星云5070TI三风扇黑色",
+        "price": 6132,
+        "quantity": 1,
+        "specs": "312",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837872897",
+        "name": "映众5070TI 超级冰龙 三风扇银色",
+        "price": 6992,
+        "quantity": 1,
+        "specs": "334",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837980076",
+        "name": "映众5070TIOC耀夜黑银色 三风扇",
+        "price": 6282,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838030643",
+        "name": "索泰5070TIOC黑色三风扇",
+        "price": 6147,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838075731",
+        "name": "技嘉冰猎鹰 5070tiOC白色三风扇",
+        "price": 6349,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838142201",
+        "name": "万丽5070TI星云三风扇黑色",
+        "price": 6132,
+        "quantity": 1,
+        "specs": "312",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838210666",
+        "name": "铭瑄5070TI电竞之心oc 黑色三风扇",
+        "price": 6488,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838267701",
+        "name": "七彩虹5070TI战斧豪华版 黑色三风扇",
+        "price": 6550,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838310876",
+        "name": "电竞判客5070TI白色三风扇",
+        "price": 6494,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838373551",
+        "name": "微星5070TIOC幻影师 黑色三风扇",
+        "price": 6199,
+        "quantity": 1,
+        "specs": "303",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838446422",
+        "name": "映众5080超级冰龙v2藏线版 黑色三风扇",
+        "price": 8839,
+        "quantity": 1,
+        "specs": "334",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838489325",
+        "name": "映众5080耀夜  黑银色相间",
+        "price": 8339,
+        "quantity": 1,
+        "specs": "300",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766838530041",
+        "name": "华硕5080大师海外版 黑色三风扇",
+        "price": 8527,
+        "quantity": 1,
+        "specs": "334",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838594592",
+        "name": "电竞判客5080OC白色三风扇",
+        "price": 8249,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838654746",
+        "name": "七彩虹5080ultraWoc 白色三风扇",
+        "price": 8612,
+        "quantity": 1,
+        "specs": "331",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838700719",
+        "name": "铭瑄5080OC 璦珈白色三风扇",
+        "price": 8535,
+        "quantity": 1,
+        "specs": "319",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838790261",
+        "name": "七彩虹5080OC水神 白",
+        "price": 8980,
+        "quantity": 1,
+        "specs": "360水冷排 需要机箱预留位",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766838880131",
+        "name": "七彩虹5080 Advancedoc黑色三风扇",
+        "price": 8978,
+        "quantity": 1,
+        "specs": "368.2需要大机箱",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838950066",
+        "name": "万丽5080 雪狐 白色三风扇",
+        "price": 8459,
+        "quantity": 1,
+        "specs": "312",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838981180",
+        "name": "万丽5070雪狐  白",
+        "price": 4599,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908049272",
+        "name": "盈通9060XT 大地之神  黑",
+        "price": 2040,
+        "quantity": 1,
+        "specs": "266",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908176473",
+        "name": "技嘉9070greOC 魔鹰 12G 黑",
+        "price": 3149,
+        "quantity": 1,
+        "specs": "320 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908214207",
+        "name": "盈通9070gre 大地之神 12G 黑",
+        "price": 3249,
+        "quantity": 1,
+        "specs": "222双风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908348086",
+        "name": "华硕9070gre 12G巨齿鲨 12G 黑色",
+        "price": 3299,
+        "quantity": 1,
+        "specs": "322 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908409177",
+        "name": "蓝宝石脉动 9070GRE12G 黑",
+        "price": 3429,
+        "quantity": 1,
+        "specs": "322 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908480208",
+        "name": "华擎黑色钢铁传奇 9070GREOC12G 黑",
+        "price": 3499,
+        "quantity": 1,
+        "specs": "333 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908556130",
+        "name": "讯景雪狼9060XT 雪狼 黑狼 黑白",
+        "price": 2313,
+        "quantity": 1,
+        "specs": "222  双风扇 黑白",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908600869",
+        "name": "讯景9060XT 16G 海外版 三风扇 黑白",
+        "price": 2799,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908690248",
+        "name": "讯景 9070XT 16G 黑狼  黑",
+        "price": 4599,
+        "quantity": 1,
+        "specs": "320三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908819396",
+        "name": "盈通9070XT樱瞳花嫁oc白色三风扇",
+        "price": 4724,
+        "quantity": 1,
+        "specs": "332",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908923307",
+        "name": "盈通 9070XT樱瞳水着atlantisOC",
+        "price": 4715,
+        "quantity": 1,
+        "specs": "332 白色三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909005363",
+        "name": "瀚铠9070XT超合金oc16g黑色",
+        "price": 4736,
+        "quantity": 1,
+        "specs": "322 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909034925",
+        "name": "瀚铠9070XT超合金oc16g白",
+        "price": 4746,
+        "quantity": 1,
+        "specs": "332 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909078695",
+        "name": "瀚铠9070XT超合金ocPRO16g黑色Vc均热板",
+        "price": 4888,
+        "quantity": 1,
+        "specs": "332三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909120131",
+        "name": "蓝宝石9070XT极地 白色三风扇",
+        "price": 5089,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909162926",
+        "name": "蓝宝石9070极地 白色三风扇",
+        "price": 4439,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      }
+    ],
+    "cooling": [
+      {
+        "id": "cooling-1",
+        "name": "瓦尔基里 B360GT 白",
+        "price": 599,
+        "specs": "360水冷 ARGB 液晶显示屏",
+        "brand": "瓦尔基里",
+        "category": "cooling",
+        "isModified": true
+      },
+      {
+        "id": "cooling-2",
+        "name": "华硕ROG龙王四代曲面颜值 黑",
+        "price": 2200,
+        "specs": "360mm水冷 | OLED屏幕 | 三把风扇",
+        "brand": "华硕",
+        "category": "cooling",
+        "isModified": true
+      },
+      {
+        "id": "cooling-3",
+        "name": "利民PA120",
+        "price": 219,
+        "specs": "双塔风冷 | 6热管 | 两把风扇",
+        "brand": "利民",
+        "category": "cooling"
+      },
+      {
+        "id": "custom-1766851422560",
+        "name": "利民PA120SE 黑色ARGB",
+        "price": 139,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766851790330",
+        "name": "利民AX120RSE 无光 黑",
+        "price": 61,
+        "quantity": 1,
+        "specs": "AMD专用",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766852946536",
+        "name": "瓦尔基里A360 ARGB黑白",
+        "price": 325,
+        "quantity": 1,
+        "specs": "双平台 360水冷",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766854048442",
+        "name": "利民AX120RSE ARGB 白",
+        "price": 66,
+        "quantity": 1,
+        "specs": "AMD专用",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910910568",
+        "name": "玄冥 塔式四热管液压轴  黑色无光",
+        "price": 64.9,
+        "quantity": 1,
+        "specs": "最高转速2000",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910940046",
+        "name": "玄冥 塔式四热管液压轴  白色无光",
+        "price": 65.9,
+        "quantity": 1,
+        "specs": "最高转速2000",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766912430404",
+        "name": "华硕ROG龙王四代曲面颜值 白",
+        "price": 2400,
+        "quantity": 1,
+        "specs": "全国联保 个人送保 6年质保",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912532506",
+        "name": "泰坦A080 360水冷 黑白",
+        "price": 398,
+        "quantity": 1,
+        "specs": "3风扇ar gb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912561797",
+        "name": "泰坦A080 240水冷 黑白",
+        "price": 318,
+        "quantity": 1,
+        "specs": "双风扇ar gb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912599563",
+        "name": "泰坦a090  黑白",
+        "price": 568,
+        "quantity": 1,
+        "specs": "三风扇 Argb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912642100",
+        "name": "泰坦lg600 360水冷 黑白",
+        "price": 698,
+        "quantity": 1,
+        "specs": "Argb灯效 水冷屏显",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913349272",
+        "name": "瓦尔基里 B360GT 黑",
+        "price": 589,
+        "quantity": 1,
+        "specs": "360水冷 ARGB 液晶显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913392981",
+        "name": "瓦尔基里b360黑色",
+        "price": 469,
+        "quantity": 1,
+        "specs": "液晶显示屏 2.0寸",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913411833",
+        "name": "瓦尔基里b360 白色",
+        "price": 479,
+        "quantity": 1,
+        "specs": "液晶显示屏 2.0寸",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913463175",
+        "name": "瓦尔基里GLA360 黑白",
+        "price": 379,
+        "quantity": 1,
+        "specs": "黑色数显屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913616164",
+        "name": "鱼巢DH1500v7黑无光 热管直触",
+        "price": 124,
+        "quantity": 1,
+        "specs": "七热管 高153",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913654329",
+        "name": "鱼巢DH1500v7白无光 热管直触",
+        "price": 124,
+        "quantity": 1,
+        "specs": "七热管 高153",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913716359",
+        "name": "鱼巢DH1500v7黑白ARGB热管直触",
+        "price": 134,
+        "quantity": 1,
+        "specs": "七热管 高153",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913771304",
+        "name": "超频三RZ620M X黑色",
+        "price": 198,
+        "quantity": 1,
+        "specs": "风冷 迷你双塔 六热管",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913829342",
+        "name": "瓦尔基里黑色vkCq125无光 黑白",
+        "price": 119,
+        "quantity": 1,
+        "specs": "风冷 六热管 双平台",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913879530",
+        "name": "瓦尔基里黑色vkCq125ARGB黑白",
+        "price": 139,
+        "quantity": 1,
+        "specs": "六热管 神光同步灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913974782",
+        "name": "酷冷至尊HYPER612单塔双风扇 黑白",
+        "price": 339,
+        "quantity": 1,
+        "specs": "无内存高度限制 无光",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914038143",
+        "name": "利民 PA120MINI黑白无光",
+        "price": 161,
+        "quantity": 1,
+        "specs": "双平台扣具",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914104839",
+        "name": "乔思伯Cr-3000E双塔黑无光",
+        "price": 111,
+        "quantity": 1,
+        "specs": "黑色无光双塔六热管 双平台扣具",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766914173988",
+        "name": "乔思伯Cr-3000E双塔黑白ARGB",
+        "price": 134,
+        "quantity": 1,
+        "specs": "双平台argb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914250912",
+        "name": "九州风神阿萨辛4S黑白",
+        "price": 400,
+        "quantity": 1,
+        "specs": "双模散热 磁吸顶盖",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914297305",
+        "name": "九州风神阿萨辛4黑白",
+        "price": 500,
+        "quantity": 1,
+        "specs": "解热功耗280w",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914428259",
+        "name": "利民雷神之锤mv360argb黑白",
+        "price": 549,
+        "quantity": 1,
+        "specs": "3.5寸显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766914481865",
+        "name": "利民ae360argb 黑白",
+        "price": 258,
+        "quantity": 1,
+        "specs": "360水冷argb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914557355",
+        "name": "利民寒冰装甲SEArgb黑白",
+        "price": 327,
+        "quantity": 1,
+        "specs": "2英寸显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914712798",
+        "name": "利民纵横视界VlSIon360ARGB黑白",
+        "price": 766,
+        "quantity": 1,
+        "specs": "6.86寸lcd磁吸屏幕",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914818656",
+        "name": "利民风擎视界黑白argb",
+        "price": 669,
+        "quantity": 1,
+        "specs": "3.5寸lcd显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914904778",
+        "name": "泰坦LA300Argb黑白",
+        "price": 498,
+        "quantity": 1,
+        "specs": "双平台扣具",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914993108",
+        "name": "泰坦 LX800PRO黑白",
+        "price": 1229,
+        "quantity": 1,
+        "specs": "2.8寸显示屏 加1.44寸显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      }
+    ],
+    "storage": [
+      {
+        "id": "storage-1",
+        "name": "三星 990 PRO 2TB",
+        "price": 1499,
+        "specs": "PCIe 4.0 | 7450MB/s读取 | 6900MB/s写入",
+        "brand": "三星",
+        "category": "storage"
+      },
+      {
+        "id": "storage-2",
+        "name": "西部数据 SN850X 2TB",
+        "price": 1299,
+        "specs": "PCIe 4.0 | 7300MB/s读取 | 6600MB/s写入",
+        "brand": "西部数据",
+        "category": "storage"
+      },
+      {
+        "id": "custom-1765821860319",
+        "name": "西数sn580",
+        "price": 751,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766671284971",
+        "name": "西数sn770 1tb  tlc颗粒",
+        "price": 722,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766851650904",
+        "name": "金邦PA3 PCIE3.0",
+        "price": 366,
+        "quantity": 1,
+        "specs": "500G",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766906996597",
+        "name": "酷鱼530  TLC颗粒1TB",
+        "price": 713,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907054495",
+        "name": "西部数据  Sn5000  1TB",
+        "price": 759,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907092177",
+        "name": "致钛7100  1TB",
+        "price": 809,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907122942",
+        "name": "微星m470Pro 1TB",
+        "price": 699,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907157062",
+        "name": "雷克沙战神 1TB",
+        "price": 769,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907220769",
+        "name": "佰维 NV7200  1TB",
+        "price": 718,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907308256",
+        "name": "梵想 S790  1TB",
+        "price": 735,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907357793",
+        "name": "长城 GT34  500G",
+        "price": 359,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907384944",
+        "name": "长城 GT34   1TB",
+        "price": 659,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907418285",
+        "name": "宏基掠夺者GM7   1TB",
+        "price": 785,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907454632",
+        "name": "宏基掠夺者GM7  2TB",
+        "price": 1149,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907522164",
+        "name": "铠侠SF10  1TB",
+        "price": 728,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907540996",
+        "name": "铠侠SF10  2TB",
+        "price": 1158,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907609046",
+        "name": "宏基暗影骑士 N3500  512G",
+        "price": 414,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907629807",
+        "name": "宏基暗影骑士 N3500  1TB",
+        "price": 662,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907647690",
+        "name": "宏基暗影骑士 N3500  2TB",
+        "price": 1009,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907676471",
+        "name": "长城GT50  1TB",
+        "price": 689,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907705609",
+        "name": "雷克沙 NQ790  1TB",
+        "price": 729,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907728107",
+        "name": "三星990Pro  1TB",
+        "price": 979,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907790577",
+        "name": "致态 TI600  1TB",
+        "price": 749,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907814785",
+        "name": "致态 TI600  2TB",
+        "price": 1243,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907844329",
+        "name": "三星9100 PRO  1TB",
+        "price": 1120,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907898883",
+        "name": "三星990evo PLUS 1TB",
+        "price": 987,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907925510",
+        "name": "三星990Pro  2TB",
+        "price": 1747,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      }
+    ],
+    "psu": [
+      {
+        "id": "psu-1",
+        "name": "海韵GX1000W 黑色",
+        "price": 1199,
+        "specs": "1000W | 80+钛金 | 全模组 | 10年质保",
+        "brand": "海韵",
+        "category": "psu",
+        "isModified": true
+      },
+      {
+        "id": "psu-2",
+        "name": "振华 卓灵FG 850W 黑色",
+        "price": 545,
+        "specs": "850W | 80+金牌 | 全模组 | 5年质保",
+        "brand": "振华",
+        "category": "psu",
+        "isModified": true
+      },
+      {
+        "id": "custom-1765823848844",
+        "name": "玄武850k+ 黑白",
+        "price": 345,
+        "quantity": 1,
+        "specs": "7年保ac线",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766670710868",
+        "name": "玄武650k+  白",
+        "price": 305,
+        "quantity": 1,
+        "specs": "金牌 7年保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766851867879",
+        "name": "玄武500kll  黑白",
+        "price": 149,
+        "quantity": 1,
+        "specs": "直出电源",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910016599",
+        "name": "利民TGFX 1000W 黑白全模组",
+        "price": 668,
+        "quantity": 1,
+        "specs": "金牌认证 全模组压纹线",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910111161",
+        "name": "海韵GX1000W 白色",
+        "price": 1299,
+        "quantity": 1,
+        "specs": "1000W | 80+钛金 | 全模组 | 10年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910351989",
+        "name": "玄武850se+ 黑",
+        "price": 255,
+        "quantity": 1,
+        "specs": "银牌持续功率950w",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910380941",
+        "name": "玄武850se+ 白",
+        "price": 265,
+        "quantity": 1,
+        "specs": "银牌持续功率950w",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910569547",
+        "name": "玄武650k+  黑",
+        "price": 295,
+        "quantity": 1,
+        "specs": "金牌 7年保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911151452",
+        "name": "金河田白金牌a+ 850W 白黑",
+        "price": 493,
+        "quantity": 1,
+        "specs": "10年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766911240267",
+        "name": "金河田白金全模组A+1050W 黑白",
+        "price": 664,
+        "quantity": 1,
+        "specs": "10年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911302123",
+        "name": "爱国者星灿 EV850W 黑白",
+        "price": 513,
+        "quantity": 1,
+        "specs": "10年质保 全日系电容",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911387549",
+        "name": "利民 TR-GN650金牌全模组 黑",
+        "price": 259,
+        "quantity": 1,
+        "specs": "金牌认证 日系主电容",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911467803",
+        "name": "安耐美金竞蝠 GK650金牌 压纹线 黑色",
+        "price": 265,
+        "quantity": 1,
+        "specs": "全日系金牌压纹线",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911614390",
+        "name": "鑫谷am650w冰山版 白",
+        "price": 188,
+        "quantity": 1,
+        "specs": "白色电源三年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766911666945",
+        "name": "航嘉650W 黑白",
+        "price": 295,
+        "quantity": 1,
+        "specs": "金牌直出电源",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911797003",
+        "name": "利民 GT850 黑",
+        "price": 329,
+        "quantity": 1,
+        "specs": "金牌全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911863321",
+        "name": "爱国者EK850W 黑白",
+        "price": 424,
+        "quantity": 1,
+        "specs": "金牌全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911978034",
+        "name": "金和田白金牌 SFX550W 黑色",
+        "price": 549.5,
+        "quantity": 1,
+        "specs": "全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912005137",
+        "name": "金和田白金牌 SFX650W 黑色",
+        "price": 600,
+        "quantity": 1,
+        "specs": "白金牌全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912031935",
+        "name": "金和田白金牌 SFX850W 黑色",
+        "price": 800,
+        "quantity": 1,
+        "specs": "小型电源全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912204723",
+        "name": "玄武650se黑色直出650w",
+        "price": 199,
+        "quantity": 1,
+        "specs": "3年以换代修",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912239157",
+        "name": "玄武650se白色直出650w",
+        "price": 209,
+        "quantity": 1,
+        "specs": "三年以换代修",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912294203",
+        "name": "玄武500k白色优化版 550w",
+        "price": 149,
+        "quantity": 1,
+        "specs": "三年以换代修",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      }
+    ],
+    "case": [
+      {
+        "id": "custom-1765823863301",
+        "name": "星灿蓝",
+        "price": 288,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "case",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766670779991",
+        "name": "半岛铁盒W6  白",
+        "price": 133,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "case",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766853583071",
+        "name": "半岛铁盒 白泽360U  黑白",
+        "price": 134,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "case",
+        "isCustom": true,
+        "isModified": true
+      }
+    ],
+    "fans": [
+      {
+        "id": "fans-1",
+        "name": "Lian Li UNI FAN SL120 V2 三联包",
+        "price": 899,
+        "specs": "120mm | ARGB | 三联包 | 磁吸连接",
+        "brand": "联力",
+        "category": "fans"
+      },
+      {
+        "id": "fans-2",
+        "name": "Noctua NF-A12x25 PWM chromax.black",
+        "price": 399,
+        "specs": "120mm | PWM | 黑色 | 静音",
+        "brand": "猫头鹰",
+        "category": "fans"
+      },
+      {
+        "id": "custom-1765821882355",
+        "name": "棱镜4Pro",
+        "price": 8,
+        "quantity": 6,
+        "specs": "ARGB",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910655286",
+        "name": "玄冥  黑",
+        "price": 11.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910670073",
+        "name": "玄冥 白",
+        "price": 12.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910763895",
+        "name": "玄冥静v2 中空轴  黑",
+        "price": 16.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910783914",
+        "name": "玄冥静v2 中空轴 白",
+        "price": 18.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915293914",
+        "name": "利民积木m12QW三连包加控制线 黑白",
+        "price": 68,
+        "quantity": 1,
+        "specs": "120MM转速2000 三年质保 ARGB",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915366242",
+        "name": "利民m12qW-S三连包黑白",
+        "price": 83,
+        "quantity": 1,
+        "specs": "无线拼接12cm积木",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915426917",
+        "name": "丛林豹星际积木第4代  三连包黑白",
+        "price": 224,
+        "quantity": 1,
+        "specs": "数显设计argb",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915523257",
+        "name": "棱镜v2积木风扇三连包 黑白",
+        "price": 89,
+        "quantity": 1,
+        "specs": "无线拼接argb",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915715610",
+        "name": "盈通缀神之光三连包白色积木风扇",
+        "price": 59,
+        "quantity": 1,
+        "specs": "argb神光同步",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915802178",
+        "name": "棱镜星链积木v5机箱风扇 三连包 黑白",
+        "price": 54,
+        "quantity": 1,
+        "specs": "ARGB神光同步 cd纹光圈",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766915938717",
+        "name": "棱镜4PROS黑白三连包CD纹",
+        "price": 59,
+        "quantity": 1,
+        "specs": "Argb神光同步",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766916050593",
+        "name": "利民b12015EX 3150转",
+        "price": 83,
+        "quantity": 1,
+        "specs": "高性能风扇 无光",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766916134232",
+        "name": "金河田FM-360三连包风扇黑白正反页",
+        "price": 119,
+        "quantity": 1,
+        "specs": "Argb神光同步",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766923798054",
+        "name": "爱国者棱镜8PRO 黑白",
+        "price": 12,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766923870140",
+        "name": "棱镜8PRO暴风眼  黑白",
+        "price": 10,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766924176564",
+        "name": "棱镜PLUS积木版三联包 黑白",
+        "price": 55,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766924271451",
+        "name": "棱镜4PRO三联包 黑白",
+        "price": 66,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      }
+    ],
+    "other": []
+  },
+  "currentConfig": {
+    "cpu": null,
+    "motherboard": null,
+    "ram": null,
+    "gpu": null,
+    "cooling": null,
+    "storage": null,
+    "psu": null,
+    "case": null,
+    "fans": null,
+    "other": []
+  },
+  "modifiedHardware": {
+    "cpu": [
+      {
+        "id": "cpu-1",
+        "name": "AMD Ryzen 9 9950X3D",
+        "price": 4499,
+        "quantity": 1,
+        "specs": "16核32线程 | 5.7GHz | 128MB缓存 | AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "cpu-2",
+        "name": "AMD Ryzen 9 9950X",
+        "price": 3177,
+        "specs": "16核32线程 | 5.7GHz | 64MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-3",
+        "name": "AMD Ryzen 9 7950X3D",
+        "price": 2999,
+        "specs": "16核32线程 | 5.0GHz | 144MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-4",
+        "name": "Intel 酷睿 Ultra 9 285K",
+        "price": 3411,
+        "specs": "24核24线程 | 5.7GHz | 36MB缓存 | LGA1851接口",
+        "brand": "Intel",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-5",
+        "name": "Intel 酷睿 i9 14900KF",
+        "price": 2829,
+        "specs": "24核32线程 | 5.8GHz | 36MB缓存 | LGA1700接口",
+        "brand": "Intel",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-6",
+        "name": "AMD Ryzen 7 9800X3D",
+        "price": 2866,
+        "specs": "8核16线程|5.2GHz| 128MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-7",
+        "name": "AMD Ryzen 7 7800X3D",
+        "price": 1968,
+        "specs": "8核16线程 | 5.0GHz | 104MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-8",
+        "name": "Intel 酷睿 i7 14700KF",
+        "price": 2199,
+        "specs": "20核28线程 | 5.6GHz | 33MB缓存 | LGA1700接口",
+        "brand": "Intel",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-9",
+        "name": "AMD Ryzen 5 9600X",
+        "price": 1271,
+        "specs": "6核12线程 | 5.4GHz | 32MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "cpu-10",
+        "name": "AMD Ryzen 5 7600X",
+        "price": 1110,
+        "specs": "6核12线程 | 5.3GHz | 32MB缓存 | AM5接口",
+        "brand": "AMD",
+        "category": "cpu",
+        "isModified": true
+      },
+      {
+        "id": "custom-1766670417264",
+        "name": "AMD Ryzen 9 9700X",
+        "price": 1659,
+        "quantity": 1,
+        "specs": "8核16线程  5.5GHz  AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766671214725",
+        "name": "AMD Ryzen 7 7700",
+        "price": 1359,
+        "quantity": 1,
+        "specs": "8核16线程  5.3GHz  AM5",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766816675784",
+        "name": "AMD  R5  7500F",
+        "price": 789,
+        "quantity": 1,
+        "specs": "6核心12线程基础频率3.7加速频率5.0 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766817498862",
+        "name": "AMD  R7  5700X",
+        "price": 969,
+        "quantity": 1,
+        "specs": "8核心16线程 基础频率3.4 动态频率4.6 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766817681882",
+        "name": "AMD  R5  5600",
+        "price": 709,
+        "quantity": 1,
+        "specs": "6核心12线程 基础频率3.7 加速频率4.4 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766817819092",
+        "name": "AMD  R5  5600X",
+        "price": 766,
+        "quantity": 1,
+        "specs": "6核12线程 基础频率3.5 加速频率4.5 AM4接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766817915661",
+        "name": "AMD  R5  9500F",
+        "price": 1129,
+        "quantity": 1,
+        "specs": "6核心12线程 基础频率3.8 加速频率5.0 AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909222388",
+        "name": "9800X3D盒装",
+        "price": 3000,
+        "quantity": 1,
+        "specs": "8核16线程|5.2GHz| 128MB缓存 | AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909315220",
+        "name": "AMD 9700X盒装",
+        "price": 1689,
+        "quantity": 1,
+        "specs": "8核心16线程5.5  AM5接口",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909421292",
+        "name": "AMD 9900X 盒装",
+        "price": 3060,
+        "quantity": 1,
+        "specs": "AM5",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909465369",
+        "name": "AMD 9950X 盒装",
+        "price": 3699,
+        "quantity": 1,
+        "specs": "AM5 主打生产力",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909538900",
+        "name": "AMD 9950X3D 全新盒装",
+        "price": 4999,
+        "quantity": 1,
+        "specs": "AM5 游戏生产力",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909628237",
+        "name": "AMD 9600X 全新盒装",
+        "price": 1273,
+        "quantity": 1,
+        "specs": "AM5",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909720346",
+        "name": "Intel 酷睿 Ultra 265K全新盒装",
+        "price": 1800,
+        "quantity": 1,
+        "specs": "20核心20线程",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909746782",
+        "name": "Intel 酷睿 Ultra 265KF全新盒装",
+        "price": 1700,
+        "quantity": 1,
+        "specs": "20核心20线程",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1767093018968",
+        "name": "1",
+        "price": 1,
+        "quantity": 1,
+        "specs": "1",
+        "brand": "自定义",
+        "category": "cpu",
+        "isCustom": true
+      }
+    ],
+    "motherboard": [
+      {
+        "id": "mb-1",
+        "name": "微星刀锋钛 B850I EDGE TI WIFI 白色",
+        "price": 1522,
+        "specs": "ITX | 8+2+1直连供电 | DDR5 | Wi-Fi 7",
+        "brand": "微星",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-2",
+        "name": "微星战斧导弹B850TOMAHAWKMAX 黑色",
+        "price": 1655,
+        "specs": "ATX | B850芯片组 | DDR5 |14+2+1供电",
+        "brand": "微星",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-4",
+        "name": "华硕 ROG B650E-E GAMING WIFI 黑",
+        "price": 1569,
+        "specs": "mATX | B850芯片组 | DDR5 | Wi-Fi 7",
+        "brand": "华硕",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-5",
+        "name": "华硕 ROG Z790-A GAMING WIFI S 吹雪 白",
+        "price": 1679,
+        "specs": "ATX | Z790芯片组 | DDR4 | Wi-Fi 6E",
+        "brand": "华硕",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "mb-6",
+        "name": "微星 MPG Z790 EDGE WIFI  白",
+        "price": 1269,
+        "specs": "ATX | Z790芯片组 | DDR5 | Wi-Fi 6E",
+        "brand": "微星",
+        "category": "motherboard",
+        "isModified": true
+      },
+      {
+        "id": "custom-1766818190423",
+        "name": "微星迫击炮B850M MORTAR WIFI7 黑",
+        "price": 1211,
+        "quantity": 1,
+        "specs": "MATX 12+2+1供电 8层pcb pcie5.0插槽 显卡快拆设计",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766818647261",
+        "name": "技嘉B850M小雕 黑色",
+        "price": 1211,
+        "quantity": 1,
+        "specs": "MATX 12+4相供电 WIFI7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766821623972",
+        "name": "微星B850MPOWER 黑",
+        "price": 1411,
+        "quantity": 1,
+        "specs": "MATX 12+2+1相供电 异步外频",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822033239",
+        "name": "微星B850M GAMING Plus WIFI 白",
+        "price": 999,
+        "quantity": 1,
+        "specs": "MATX 10+2+1供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822157484",
+        "name": "华硕TUFB850-PLUS二代 黑色",
+        "price": 1277,
+        "quantity": 1,
+        "specs": "MATX  14+2+1相供电  WiFi 7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822183858",
+        "name": "华硕TUFB850-PLUS二代 白色",
+        "price": 1299,
+        "quantity": 1,
+        "specs": "MATX 14+2+1相供电  WiFi 7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822279204",
+        "name": "华硕B850M AYW 白",
+        "price": 873,
+        "quantity": 1,
+        "specs": "MATX 8+2+1相供电  WiFi 6",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822409549",
+        "name": "华硕B850M AYW OC 白",
+        "price": 1339,
+        "quantity": 1,
+        "specs": "MATX 12+2+1相供电WiFi7 异步外频",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822523200",
+        "name": "七彩虹B850M战列舰v14",
+        "price": 900,
+        "quantity": 1,
+        "specs": "MATX 10+2+1相供电  Pcie 5.0",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822688169",
+        "name": "微星刀锋钛 B850 EDGE TI 白",
+        "price": 1669,
+        "quantity": 1,
+        "specs": "ATX 14+2+1供电 显卡快拆设计",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766822804585",
+        "name": "技嘉B850M AORUS 冰雕 白",
+        "price": 1211,
+        "quantity": 1,
+        "specs": "MATX 12+2+2供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766822931170",
+        "name": "华硕 B850-G GAMING WIFI S小吹雪 白",
+        "price": 1379,
+        "quantity": 1,
+        "specs": "MATX 14+2+1供电 八层PCB",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823187898",
+        "name": "技嘉 B850M 魔鹰X  WiFi6E 黑",
+        "price": 1138,
+        "quantity": 1,
+        "specs": "MATX 10+2+2供电 显卡快拆",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823394810",
+        "name": "七彩虹B850M-MEOW WIFI7 V14橘猫 白",
+        "price": 899,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823578180",
+        "name": "技嘉B850M电竞雕 黑",
+        "price": 1359,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823679335",
+        "name": "华硕 B650M-AYW WIFI 白",
+        "price": 779,
+        "quantity": 1,
+        "specs": "MATX 6+2+1供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766823768328",
+        "name": "华硕天选 B850M GAMING 白",
+        "price": 1199,
+        "quantity": 1,
+        "specs": "MATX 10+2+1相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766823891810",
+        "name": "技嘉 B850M FORCE战鹰 白黄相间",
+        "price": 811,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824113534",
+        "name": "华硕 TUFB850-BTFWIFI W背插主板 白色",
+        "price": 1589,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824305621",
+        "name": "微星 B650M APE 背插主板 白",
+        "price": 839,
+        "quantity": 1,
+        "specs": "MATX 无显卡供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824533388",
+        "name": "微星B850 GAMING Plus WIFI 白",
+        "price": 1329,
+        "quantity": 1,
+        "specs": "ATX大板 12+2+1供电  WiFi 7",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766824870835",
+        "name": "铭瑄B650ITX WIFI ICE 白",
+        "price": 699,
+        "quantity": 1,
+        "specs": "ITX 6+2+1相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824905139",
+        "name": "华硕B850-I GAMING W迷你吹雪 白",
+        "price": 2422,
+        "quantity": 1,
+        "specs": "ITX 10+3+1相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766824983760",
+        "name": "华擎 B850I PG 闪电风暴",
+        "price": 1699,
+        "quantity": 1,
+        "specs": "MATX 10+1+1相供电  Pcie5.0插槽",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766825157750",
+        "name": "铭瑄B550M GAMING 白",
+        "price": 511,
+        "quantity": 1,
+        "specs": "MATX 双满速m.2接口 支持ARGB",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766825237231",
+        "name": "微星迫击炮 B550M MORTAR WIFI 黑",
+        "price": 677,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766825312585",
+        "name": "华硕 B550M-PLUS重炮手 黑",
+        "price": 711,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826086572",
+        "name": "精粤B650M-D  主板黑 马甲白",
+        "price": 431,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826155647",
+        "name": "精粤B650M GAMING PLUS 白",
+        "price": 535,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826262375",
+        "name": "精粤B650M雪梦 白",
+        "price": 651,
+        "quantity": 1,
+        "specs": "MATX 19相供电",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826338989",
+        "name": "精粤B650M雪之梦WIFI 白",
+        "price": 699,
+        "quantity": 1,
+        "specs": "MATX 19相供电  WiFi 6",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766852371190",
+        "name": "微星B650M GAMING WIFI",
+        "price": 699,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909834553",
+        "name": "华硕z890-p WIFI D5",
+        "price": 1358,
+        "quantity": 1,
+        "specs": "MATX DDR5",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766909887552",
+        "name": "微星z890战斧导弹WiFi",
+        "price": 1534,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "motherboard",
+        "isCustom": true
+      }
+    ],
+    "ram": [
+      {
+        "id": "custom-1766670594928",
+        "name": "雷克沙6000-32  黑",
+        "price": 959,
+        "quantity": 1,
+        "specs": "单条16g  无光版本",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826441500",
+        "name": "光威天策 皓月白",
+        "price": 589,
+        "quantity": 1,
+        "specs": "单条16 3200-18-1.35V",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826484487",
+        "name": "光威天策 皓月白",
+        "price": 1129,
+        "quantity": 1,
+        "specs": "16X2 3200-18-1.35V",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826632115",
+        "name": "玖合玲珑6000-28 海力士a代颗粒  白",
+        "price": 2011,
+        "quantity": 1,
+        "specs": "双条16g 无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826673752",
+        "name": "玖合玲珑6000-28 海力士a代颗粒 白",
+        "price": 2211,
+        "quantity": 1,
+        "specs": "双条16g ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766826858050",
+        "name": "绫龙6000-36  黑白",
+        "price": 1999,
+        "quantity": 1,
+        "specs": "无光24×2 美光颗粒",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826901159",
+        "name": "绫龙6000-36  黑白",
+        "price": 1744,
+        "quantity": 1,
+        "specs": "南亚颗粒 16×2 无光版本 颜色可选",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766826953631",
+        "name": "绫龙6000-28  黑白",
+        "price": 1999,
+        "quantity": 1,
+        "specs": "海力士a代单面颗粒 16×2 颜色可选",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827029303",
+        "name": "雷克沙 雷神之锤 6000c36 黑白",
+        "price": 899,
+        "quantity": 1,
+        "specs": "国产颗粒 单条16无光版本",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766827110973",
+        "name": "金百达星刃 6000 28 黑白",
+        "price": 2411,
+        "quantity": 1,
+        "specs": "16×2海力士a代颗粒无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827182706",
+        "name": "金百达银爵 6000c36 黑白",
+        "price": 1994,
+        "quantity": 1,
+        "specs": "16×2 海力士m代颗粒 无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827252426",
+        "name": "金百达黑刃 6000c36 黑",
+        "price": 1988,
+        "quantity": 1,
+        "specs": "海力士m代颗粒 16×2无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827326592",
+        "name": "宏基掠夺者冰刃系列6000 28黑白",
+        "price": 2301,
+        "quantity": 1,
+        "specs": "海力士a代颗粒ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766827456837",
+        "name": "宏基炫光星舰 6000c28 黑",
+        "price": 2301,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 16×2 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827606620",
+        "name": "百维hx100 6000c36 银色",
+        "price": 1911,
+        "quantity": 1,
+        "specs": "16×2 海力士m代 无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827687696",
+        "name": "光威龙武 6400c32 黑",
+        "price": 1883,
+        "quantity": 1,
+        "specs": "16×2 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827756250",
+        "name": "皇家戟6000c28银色",
+        "price": 2703,
+        "quantity": 1,
+        "specs": "16×2  ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827864959",
+        "name": "玖合异刃6000c28 黑色无光",
+        "price": 1983,
+        "quantity": 1,
+        "specs": "16×2双条无光 海力士a代颗粒",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766827964875",
+        "name": "机械师星辰 6000c28 黑白银",
+        "price": 2431,
+        "quantity": 1,
+        "specs": "24×2 海力士新m代颗粒 ARGB光效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766830848024",
+        "name": "挚科巨浪6000c38 黑",
+        "price": 1609,
+        "quantity": 1,
+        "specs": "国产颗粒 16×2无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766830959988",
+        "name": "威刚 D300-6400c32黑色无光",
+        "price": 1888,
+        "quantity": 1,
+        "specs": "32×1 A代颗粒",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831085934",
+        "name": "威刚龙耀D500G-6000-26 黑白",
+        "price": 2501,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831262367",
+        "name": "金百达星刃 8000c36 黑",
+        "price": 2519,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 16×2 ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831363003",
+        "name": "玖合异刃6800c34 无光版本",
+        "price": 1992,
+        "quantity": 1,
+        "specs": "海力士a代颗粒 16×2",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831463215",
+        "name": "雷克沙战神之翼 6000c28 黑",
+        "price": 2309,
+        "quantity": 1,
+        "specs": "16×2海力士a代颗粒 ARGB",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831587083",
+        "name": "科摩斯承影机甲6000c28 黑白",
+        "price": 1319,
+        "quantity": 1,
+        "specs": "24×1 海力士新m代ARGB灯效",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831650426",
+        "name": "海拉8g单条 6000C28海力士a代 黑",
+        "price": 709,
+        "quantity": 1,
+        "specs": "无光版本 8×1",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831746831",
+        "name": "阿斯加特 雷神索尔8000c40 黑色无光",
+        "price": 1419,
+        "quantity": 1,
+        "specs": "海力士m代 24×1",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831893090",
+        "name": "光威神策 6800 c 34 白",
+        "price": 1219,
+        "quantity": 1,
+        "specs": "24×1",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766831982238",
+        "name": "腾隐6000-42",
+        "price": 999,
+        "quantity": 1,
+        "specs": "24×1单条黑色无马甲",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766832155101",
+        "name": "阿斯加特海拉 6000c36",
+        "price": 999,
+        "quantity": 1,
+        "specs": "24×1  白色无光",
+        "brand": "自定义",
+        "category": "ram",
+        "isCustom": true
+      }
+    ],
+    "gpu": [
+      {
+        "id": "gpu-1",
+        "name": "华硕 TUF NVIDIA RTX 5090  32G满血 黑",
+        "price": 22540,
+        "specs": "32GB GDDR7",
+        "brand": "NVIDIA",
+        "category": "gpu",
+        "isModified": true
+      },
+      {
+        "id": "custom-1766670639490",
+        "name": "电竞叛客5060X2W 8G双风扇白色",
+        "price": 2323,
+        "quantity": 1,
+        "specs": "8pin供电接口 长245MM",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766671453089",
+        "name": "双敏5050 双风扇  白",
+        "price": 1799,
+        "quantity": 1,
+        "specs": "推荐电源 550W 长230",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766834990834",
+        "name": "映众5060耀夜x2 双风扇黑色",
+        "price": 2367,
+        "quantity": 1,
+        "specs": "长225",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835085921",
+        "name": "万历5060星云 8g 黑色双风扇",
+        "price": 2299,
+        "quantity": 1,
+        "specs": "长211MM",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835182672",
+        "name": "技嘉5060OC 风魔 黑色",
+        "price": 2373,
+        "quantity": 1,
+        "specs": "双风扇 长222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835246230",
+        "name": "铭轩终结者5060 黑白双风扇",
+        "price": 2331,
+        "quantity": 1,
+        "specs": "长222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835316677",
+        "name": "七彩虹5060战斧豪华版三风扇 黑",
+        "price": 2499,
+        "quantity": 1,
+        "specs": "长310",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835390245",
+        "name": "影驰5060OC魔刃 三风扇黑色",
+        "price": 2509,
+        "quantity": 1,
+        "specs": "长316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835432031",
+        "name": "影驰5060OC圣刃 V2白色三风扇",
+        "price": 2509,
+        "quantity": 1,
+        "specs": "长316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835474332",
+        "name": "影驰金属大师 5060黑金v2oc 三风扇黑色",
+        "price": 2559,
+        "quantity": 1,
+        "specs": "长320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835527093",
+        "name": "影驰金属大师 5060 v2 oc 三风扇白色",
+        "price": 2559,
+        "quantity": 1,
+        "specs": "长320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835578947",
+        "name": "微星5060幻影 双风扇黑色",
+        "price": 2378,
+        "quantity": 1,
+        "specs": "长211",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835695208",
+        "name": "铭瑄5060 OC 电竞之心 黑色三风扇",
+        "price": 2475,
+        "quantity": 1,
+        "specs": "长320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835795708",
+        "name": "技嘉5060猎鹰MAX三风扇 黑色",
+        "price": 2511,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835849489",
+        "name": "耕升5060 8g 幽灵 双风扇黑色",
+        "price": 2279,
+        "quantity": 1,
+        "specs": "长262",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766835921419",
+        "name": "微星5060幻影师OC 黑色双风扇",
+        "price": 2388,
+        "quantity": 1,
+        "specs": "长211",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836122716",
+        "name": "铭轩5060OC 璦珈 三风扇 白 流光灯效",
+        "price": 2514,
+        "quantity": 1,
+        "specs": "长319",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836180164",
+        "name": "索泰5060OC月影 白色三风扇",
+        "price": 2438,
+        "quantity": 1,
+        "specs": "长293",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836251486",
+        "name": "盈通5060大地之神 黑色双风扇",
+        "price": 2335,
+        "quantity": 1,
+        "specs": "长270",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836358822",
+        "name": "万丽5060TI 8G 星云 黑色双风扇",
+        "price": 2951,
+        "quantity": 1,
+        "specs": "长239",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836416129",
+        "name": "七彩虹5060ti 战斧 双风扇 黑色",
+        "price": 2971,
+        "quantity": 1,
+        "specs": "231",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836471725",
+        "name": "微星5060TI幻影师 黑色三风扇",
+        "price": 3022,
+        "quantity": 1,
+        "specs": "308",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836536092",
+        "name": "电竞判客 5060TI 双风扇 黑白",
+        "price": 2844,
+        "quantity": 1,
+        "specs": "222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836615169",
+        "name": "映众5060TI耀夜 黑色双风扇",
+        "price": 2899,
+        "quantity": 1,
+        "specs": "222",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836693264",
+        "name": "铭瑄5060ti TRB黑色三风扇",
+        "price": 3005,
+        "quantity": 1,
+        "specs": "292",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836770908",
+        "name": "技嘉5060TIOC魔鹰 黑色三风扇",
+        "price": 3121,
+        "quantity": 1,
+        "specs": "281",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836846504",
+        "name": "耕升5060TI 幽灵双风扇黑色",
+        "price": 2855,
+        "quantity": 1,
+        "specs": "262",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766836999426",
+        "name": "影驰5060TIOC 魔刃圣刃 黑白三风扇",
+        "price": 3095,
+        "quantity": 1,
+        "specs": "316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837069991",
+        "name": "技嘉5070风魔12G OC 三风扇黑色",
+        "price": 4517,
+        "quantity": 1,
+        "specs": "311",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837125987",
+        "name": "盈通5070 12g 黑色三风扇 D7豪华版",
+        "price": 4449,
+        "quantity": 1,
+        "specs": "290",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837180416",
+        "name": "七彩虹5070战斧独立豪华版 黑色三风扇",
+        "price": 4645,
+        "quantity": 1,
+        "specs": "301",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837237860",
+        "name": "铭瑄5070OC电竞之心",
+        "price": 4571,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837311706",
+        "name": "华硕大师5070OC黑色三风扇",
+        "price": 4593,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837408807",
+        "name": "影驰5070 OC 12G 圣刃 白色三风扇",
+        "price": 4699,
+        "quantity": 1,
+        "specs": "316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837463160",
+        "name": "影驰5070OC12G 金属大师黑金三风扇黑",
+        "price": 4799,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837529907",
+        "name": "影驰5070tiOC16G圣刃魔刃三风扇黑白",
+        "price": 6479,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837586374",
+        "name": "5070电竞叛客 白色三风扇",
+        "price": 4584,
+        "quantity": 1,
+        "specs": "316",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837776828",
+        "name": "万丽星云5070TI三风扇黑色",
+        "price": 6132,
+        "quantity": 1,
+        "specs": "312",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837872897",
+        "name": "映众5070TI 超级冰龙 三风扇银色",
+        "price": 6992,
+        "quantity": 1,
+        "specs": "334",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766837980076",
+        "name": "映众5070TIOC耀夜黑银色 三风扇",
+        "price": 6282,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838030643",
+        "name": "索泰5070TIOC黑色三风扇",
+        "price": 6147,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838075731",
+        "name": "技嘉冰猎鹰 5070tiOC白色三风扇",
+        "price": 6349,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838142201",
+        "name": "万丽5070TI星云三风扇黑色",
+        "price": 6132,
+        "quantity": 1,
+        "specs": "312",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838210666",
+        "name": "铭瑄5070TI电竞之心oc 黑色三风扇",
+        "price": 6488,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838267701",
+        "name": "七彩虹5070TI战斧豪华版 黑色三风扇",
+        "price": 6550,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838310876",
+        "name": "电竞判客5070TI白色三风扇",
+        "price": 6494,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838373551",
+        "name": "微星5070TIOC幻影师 黑色三风扇",
+        "price": 6199,
+        "quantity": 1,
+        "specs": "303",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838446422",
+        "name": "映众5080超级冰龙v2藏线版 黑色三风扇",
+        "price": 8839,
+        "quantity": 1,
+        "specs": "334",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838489325",
+        "name": "映众5080耀夜  黑银色相间",
+        "price": 8339,
+        "quantity": 1,
+        "specs": "300",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766838530041",
+        "name": "华硕5080大师海外版 黑色三风扇",
+        "price": 8527,
+        "quantity": 1,
+        "specs": "334",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838594592",
+        "name": "电竞判客5080OC白色三风扇",
+        "price": 8249,
+        "quantity": 1,
+        "specs": "320",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838654746",
+        "name": "七彩虹5080ultraWoc 白色三风扇",
+        "price": 8612,
+        "quantity": 1,
+        "specs": "331",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838700719",
+        "name": "铭瑄5080OC 璦珈白色三风扇",
+        "price": 8535,
+        "quantity": 1,
+        "specs": "319",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838790261",
+        "name": "七彩虹5080OC水神 白",
+        "price": 8980,
+        "quantity": 1,
+        "specs": "360水冷排 需要机箱预留位",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766838880131",
+        "name": "七彩虹5080 Advancedoc黑色三风扇",
+        "price": 8978,
+        "quantity": 1,
+        "specs": "368.2需要大机箱",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838950066",
+        "name": "万丽5080 雪狐 白色三风扇",
+        "price": 8459,
+        "quantity": 1,
+        "specs": "312",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766838981180",
+        "name": "万丽5070雪狐  白",
+        "price": 4599,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908049272",
+        "name": "盈通9060XT 大地之神  黑",
+        "price": 2040,
+        "quantity": 1,
+        "specs": "266",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908176473",
+        "name": "技嘉9070greOC 魔鹰 12G 黑",
+        "price": 3149,
+        "quantity": 1,
+        "specs": "320 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908214207",
+        "name": "盈通9070gre 大地之神 12G 黑",
+        "price": 3249,
+        "quantity": 1,
+        "specs": "222双风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908348086",
+        "name": "华硕9070gre 12G巨齿鲨 12G 黑色",
+        "price": 3299,
+        "quantity": 1,
+        "specs": "322 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908409177",
+        "name": "蓝宝石脉动 9070GRE12G 黑",
+        "price": 3429,
+        "quantity": 1,
+        "specs": "322 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908480208",
+        "name": "华擎黑色钢铁传奇 9070GREOC12G 黑",
+        "price": 3499,
+        "quantity": 1,
+        "specs": "333 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908556130",
+        "name": "讯景雪狼9060XT 雪狼 黑狼 黑白",
+        "price": 2313,
+        "quantity": 1,
+        "specs": "222  双风扇 黑白",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908600869",
+        "name": "讯景9060XT 16G 海外版 三风扇 黑白",
+        "price": 2799,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908690248",
+        "name": "讯景 9070XT 16G 黑狼  黑",
+        "price": 4599,
+        "quantity": 1,
+        "specs": "320三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766908819396",
+        "name": "盈通9070XT樱瞳花嫁oc白色三风扇",
+        "price": 4724,
+        "quantity": 1,
+        "specs": "332",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766908923307",
+        "name": "盈通 9070XT樱瞳水着atlantisOC",
+        "price": 4715,
+        "quantity": 1,
+        "specs": "332 白色三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909005363",
+        "name": "瀚铠9070XT超合金oc16g黑色",
+        "price": 4736,
+        "quantity": 1,
+        "specs": "322 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909034925",
+        "name": "瀚铠9070XT超合金oc16g白",
+        "price": 4746,
+        "quantity": 1,
+        "specs": "332 三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909078695",
+        "name": "瀚铠9070XT超合金ocPRO16g黑色Vc均热板",
+        "price": 4888,
+        "quantity": 1,
+        "specs": "332三风扇",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909120131",
+        "name": "蓝宝石9070XT极地 白色三风扇",
+        "price": 5089,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766909162926",
+        "name": "蓝宝石9070极地 白色三风扇",
+        "price": 4439,
+        "quantity": 1,
+        "specs": "322",
+        "brand": "自定义",
+        "category": "gpu",
+        "isCustom": true
+      }
+    ],
+    "cooling": [
+      {
+        "id": "cooling-1",
+        "name": "瓦尔基里 B360GT 白",
+        "price": 599,
+        "specs": "360水冷 ARGB 液晶显示屏",
+        "brand": "瓦尔基里",
+        "category": "cooling",
+        "isModified": true
+      },
+      {
+        "id": "cooling-2",
+        "name": "华硕ROG龙王四代曲面颜值 黑",
+        "price": 2200,
+        "specs": "360mm水冷 | OLED屏幕 | 三把风扇",
+        "brand": "华硕",
+        "category": "cooling",
+        "isModified": true
+      },
+      {
+        "id": "custom-1766851422560",
+        "name": "利民PA120SE 黑色ARGB",
+        "price": 139,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766851790330",
+        "name": "利民AX120RSE 无光 黑",
+        "price": 61,
+        "quantity": 1,
+        "specs": "AMD专用",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766852946536",
+        "name": "瓦尔基里A360 ARGB黑白",
+        "price": 325,
+        "quantity": 1,
+        "specs": "双平台 360水冷",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766854048442",
+        "name": "利民AX120RSE ARGB 白",
+        "price": 66,
+        "quantity": 1,
+        "specs": "AMD专用",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910910568",
+        "name": "玄冥 塔式四热管液压轴  黑色无光",
+        "price": 64.9,
+        "quantity": 1,
+        "specs": "最高转速2000",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910940046",
+        "name": "玄冥 塔式四热管液压轴  白色无光",
+        "price": 65.9,
+        "quantity": 1,
+        "specs": "最高转速2000",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766912430404",
+        "name": "华硕ROG龙王四代曲面颜值 白",
+        "price": 2400,
+        "quantity": 1,
+        "specs": "全国联保 个人送保 6年质保",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912532506",
+        "name": "泰坦A080 360水冷 黑白",
+        "price": 398,
+        "quantity": 1,
+        "specs": "3风扇ar gb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912561797",
+        "name": "泰坦A080 240水冷 黑白",
+        "price": 318,
+        "quantity": 1,
+        "specs": "双风扇ar gb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912599563",
+        "name": "泰坦a090  黑白",
+        "price": 568,
+        "quantity": 1,
+        "specs": "三风扇 Argb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912642100",
+        "name": "泰坦lg600 360水冷 黑白",
+        "price": 698,
+        "quantity": 1,
+        "specs": "Argb灯效 水冷屏显",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913349272",
+        "name": "瓦尔基里 B360GT 黑",
+        "price": 589,
+        "quantity": 1,
+        "specs": "360水冷 ARGB 液晶显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913392981",
+        "name": "瓦尔基里b360黑色",
+        "price": 469,
+        "quantity": 1,
+        "specs": "液晶显示屏 2.0寸",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913411833",
+        "name": "瓦尔基里b360 白色",
+        "price": 479,
+        "quantity": 1,
+        "specs": "液晶显示屏 2.0寸",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913463175",
+        "name": "瓦尔基里GLA360 黑白",
+        "price": 379,
+        "quantity": 1,
+        "specs": "黑色数显屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913616164",
+        "name": "鱼巢DH1500v7黑无光 热管直触",
+        "price": 124,
+        "quantity": 1,
+        "specs": "七热管 高153",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913654329",
+        "name": "鱼巢DH1500v7白无光 热管直触",
+        "price": 124,
+        "quantity": 1,
+        "specs": "七热管 高153",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913716359",
+        "name": "鱼巢DH1500v7黑白ARGB热管直触",
+        "price": 134,
+        "quantity": 1,
+        "specs": "七热管 高153",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913771304",
+        "name": "超频三RZ620M X黑色",
+        "price": 198,
+        "quantity": 1,
+        "specs": "风冷 迷你双塔 六热管",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913829342",
+        "name": "瓦尔基里黑色vkCq125无光 黑白",
+        "price": 119,
+        "quantity": 1,
+        "specs": "风冷 六热管 双平台",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913879530",
+        "name": "瓦尔基里黑色vkCq125ARGB黑白",
+        "price": 139,
+        "quantity": 1,
+        "specs": "六热管 神光同步灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766913974782",
+        "name": "酷冷至尊HYPER612单塔双风扇 黑白",
+        "price": 339,
+        "quantity": 1,
+        "specs": "无内存高度限制 无光",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914038143",
+        "name": "利民 PA120MINI黑白无光",
+        "price": 161,
+        "quantity": 1,
+        "specs": "双平台扣具",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914104839",
+        "name": "乔思伯Cr-3000E双塔黑无光",
+        "price": 111,
+        "quantity": 1,
+        "specs": "黑色无光双塔六热管 双平台扣具",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766914173988",
+        "name": "乔思伯Cr-3000E双塔黑白ARGB",
+        "price": 134,
+        "quantity": 1,
+        "specs": "双平台argb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914250912",
+        "name": "九州风神阿萨辛4S黑白",
+        "price": 400,
+        "quantity": 1,
+        "specs": "双模散热 磁吸顶盖",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914297305",
+        "name": "九州风神阿萨辛4黑白",
+        "price": 500,
+        "quantity": 1,
+        "specs": "解热功耗280w",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914428259",
+        "name": "利民雷神之锤mv360argb黑白",
+        "price": 549,
+        "quantity": 1,
+        "specs": "3.5寸显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766914481865",
+        "name": "利民ae360argb 黑白",
+        "price": 258,
+        "quantity": 1,
+        "specs": "360水冷argb灯效",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914557355",
+        "name": "利民寒冰装甲SEArgb黑白",
+        "price": 327,
+        "quantity": 1,
+        "specs": "2英寸显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914712798",
+        "name": "利民纵横视界VlSIon360ARGB黑白",
+        "price": 766,
+        "quantity": 1,
+        "specs": "6.86寸lcd磁吸屏幕",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914818656",
+        "name": "利民风擎视界黑白argb",
+        "price": 669,
+        "quantity": 1,
+        "specs": "3.5寸lcd显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914904778",
+        "name": "泰坦LA300Argb黑白",
+        "price": 498,
+        "quantity": 1,
+        "specs": "双平台扣具",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766914993108",
+        "name": "泰坦 LX800PRO黑白",
+        "price": 1229,
+        "quantity": 1,
+        "specs": "2.8寸显示屏 加1.44寸显示屏",
+        "brand": "自定义",
+        "category": "cooling",
+        "isCustom": true
+      }
+    ],
+    "storage": [
+      {
+        "id": "custom-1765821860319",
+        "name": "西数sn580",
+        "price": 751,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766671284971",
+        "name": "西数sn770 1tb  tlc颗粒",
+        "price": 722,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766851650904",
+        "name": "金邦PA3 PCIE3.0",
+        "price": 366,
+        "quantity": 1,
+        "specs": "500G",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766906996597",
+        "name": "酷鱼530  TLC颗粒1TB",
+        "price": 713,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907054495",
+        "name": "西部数据  Sn5000  1TB",
+        "price": 759,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907092177",
+        "name": "致钛7100  1TB",
+        "price": 809,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907122942",
+        "name": "微星m470Pro 1TB",
+        "price": 699,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907157062",
+        "name": "雷克沙战神 1TB",
+        "price": 769,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907220769",
+        "name": "佰维 NV7200  1TB",
+        "price": 718,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907308256",
+        "name": "梵想 S790  1TB",
+        "price": 735,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907357793",
+        "name": "长城 GT34  500G",
+        "price": 359,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907384944",
+        "name": "长城 GT34   1TB",
+        "price": 659,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907418285",
+        "name": "宏基掠夺者GM7   1TB",
+        "price": 785,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907454632",
+        "name": "宏基掠夺者GM7  2TB",
+        "price": 1149,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907522164",
+        "name": "铠侠SF10  1TB",
+        "price": 728,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907540996",
+        "name": "铠侠SF10  2TB",
+        "price": 1158,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907609046",
+        "name": "宏基暗影骑士 N3500  512G",
+        "price": 414,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907629807",
+        "name": "宏基暗影骑士 N3500  1TB",
+        "price": 662,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907647690",
+        "name": "宏基暗影骑士 N3500  2TB",
+        "price": 1009,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907676471",
+        "name": "长城GT50  1TB",
+        "price": 689,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907705609",
+        "name": "雷克沙 NQ790  1TB",
+        "price": 729,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907728107",
+        "name": "三星990Pro  1TB",
+        "price": 979,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907790577",
+        "name": "致态 TI600  1TB",
+        "price": 749,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907814785",
+        "name": "致态 TI600  2TB",
+        "price": 1243,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907844329",
+        "name": "三星9100 PRO  1TB",
+        "price": 1120,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907898883",
+        "name": "三星990evo PLUS 1TB",
+        "price": 987,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766907925510",
+        "name": "三星990Pro  2TB",
+        "price": 1747,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "storage",
+        "isCustom": true
+      }
+    ],
+    "psu": [
+      {
+        "id": "psu-1",
+        "name": "海韵GX1000W 黑色",
+        "price": 1199,
+        "specs": "1000W | 80+钛金 | 全模组 | 10年质保",
+        "brand": "海韵",
+        "category": "psu",
+        "isModified": true
+      },
+      {
+        "id": "psu-2",
+        "name": "振华 卓灵FG 850W 黑色",
+        "price": 545,
+        "specs": "850W | 80+金牌 | 全模组 | 5年质保",
+        "brand": "振华",
+        "category": "psu",
+        "isModified": true
+      },
+      {
+        "id": "custom-1765823848844",
+        "name": "玄武850k+ 黑白",
+        "price": 345,
+        "quantity": 1,
+        "specs": "7年保ac线",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766670710868",
+        "name": "玄武650k+  白",
+        "price": 305,
+        "quantity": 1,
+        "specs": "金牌 7年保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766851867879",
+        "name": "玄武500kll  黑白",
+        "price": 149,
+        "quantity": 1,
+        "specs": "直出电源",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910016599",
+        "name": "利民TGFX 1000W 黑白全模组",
+        "price": 668,
+        "quantity": 1,
+        "specs": "金牌认证 全模组压纹线",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910111161",
+        "name": "海韵GX1000W 白色",
+        "price": 1299,
+        "quantity": 1,
+        "specs": "1000W | 80+钛金 | 全模组 | 10年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910351989",
+        "name": "玄武850se+ 黑",
+        "price": 255,
+        "quantity": 1,
+        "specs": "银牌持续功率950w",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910380941",
+        "name": "玄武850se+ 白",
+        "price": 265,
+        "quantity": 1,
+        "specs": "银牌持续功率950w",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910569547",
+        "name": "玄武650k+  黑",
+        "price": 295,
+        "quantity": 1,
+        "specs": "金牌 7年保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911151452",
+        "name": "金河田白金牌a+ 850W 白黑",
+        "price": 493,
+        "quantity": 1,
+        "specs": "10年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766911240267",
+        "name": "金河田白金全模组A+1050W 黑白",
+        "price": 664,
+        "quantity": 1,
+        "specs": "10年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911302123",
+        "name": "爱国者星灿 EV850W 黑白",
+        "price": 513,
+        "quantity": 1,
+        "specs": "10年质保 全日系电容",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911387549",
+        "name": "利民 TR-GN650金牌全模组 黑",
+        "price": 259,
+        "quantity": 1,
+        "specs": "金牌认证 日系主电容",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911467803",
+        "name": "安耐美金竞蝠 GK650金牌 压纹线 黑色",
+        "price": 265,
+        "quantity": 1,
+        "specs": "全日系金牌压纹线",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911614390",
+        "name": "鑫谷am650w冰山版 白",
+        "price": 188,
+        "quantity": 1,
+        "specs": "白色电源三年质保",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766911666945",
+        "name": "航嘉650W 黑白",
+        "price": 295,
+        "quantity": 1,
+        "specs": "金牌直出电源",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911797003",
+        "name": "利民 GT850 黑",
+        "price": 329,
+        "quantity": 1,
+        "specs": "金牌全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911863321",
+        "name": "爱国者EK850W 黑白",
+        "price": 424,
+        "quantity": 1,
+        "specs": "金牌全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766911978034",
+        "name": "金和田白金牌 SFX550W 黑色",
+        "price": 549.5,
+        "quantity": 1,
+        "specs": "全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912005137",
+        "name": "金和田白金牌 SFX650W 黑色",
+        "price": 600,
+        "quantity": 1,
+        "specs": "白金牌全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912031935",
+        "name": "金和田白金牌 SFX850W 黑色",
+        "price": 800,
+        "quantity": 1,
+        "specs": "小型电源全模组",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912204723",
+        "name": "玄武650se黑色直出650w",
+        "price": 199,
+        "quantity": 1,
+        "specs": "3年以换代修",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912239157",
+        "name": "玄武650se白色直出650w",
+        "price": 209,
+        "quantity": 1,
+        "specs": "三年以换代修",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766912294203",
+        "name": "玄武500k白色优化版 550w",
+        "price": 149,
+        "quantity": 1,
+        "specs": "三年以换代修",
+        "brand": "自定义",
+        "category": "psu",
+        "isCustom": true
+      }
+    ],
+    "case": [
+      {
+        "id": "custom-1765823863301",
+        "name": "星灿蓝",
+        "price": 288,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "case",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766670779991",
+        "name": "半岛铁盒W6  白",
+        "price": 133,
+        "quantity": 1,
+        "specs": "自定义硬件",
+        "brand": "自定义",
+        "category": "case",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766853583071",
+        "name": "半岛铁盒 白泽360U  黑白",
+        "price": 134,
+        "quantity": 1,
+        "specs": "MATX",
+        "brand": "自定义",
+        "category": "case",
+        "isCustom": true,
+        "isModified": true
+      }
+    ],
+    "fans": [
+      {
+        "id": "custom-1765821882355",
+        "name": "棱镜4Pro",
+        "price": 8,
+        "quantity": 6,
+        "specs": "ARGB",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910655286",
+        "name": "玄冥  黑",
+        "price": 11.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910670073",
+        "name": "玄冥 白",
+        "price": 12.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766910763895",
+        "name": "玄冥静v2 中空轴  黑",
+        "price": 16.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766910783914",
+        "name": "玄冥静v2 中空轴 白",
+        "price": 18.9,
+        "quantity": 1,
+        "specs": "120mm",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915293914",
+        "name": "利民积木m12QW三连包加控制线 黑白",
+        "price": 68,
+        "quantity": 1,
+        "specs": "120MM转速2000 三年质保 ARGB",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915366242",
+        "name": "利民m12qW-S三连包黑白",
+        "price": 83,
+        "quantity": 1,
+        "specs": "无线拼接12cm积木",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915426917",
+        "name": "丛林豹星际积木第4代  三连包黑白",
+        "price": 224,
+        "quantity": 1,
+        "specs": "数显设计argb",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915523257",
+        "name": "棱镜v2积木风扇三连包 黑白",
+        "price": 89,
+        "quantity": 1,
+        "specs": "无线拼接argb",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915715610",
+        "name": "盈通缀神之光三连包白色积木风扇",
+        "price": 59,
+        "quantity": 1,
+        "specs": "argb神光同步",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766915802178",
+        "name": "棱镜星链积木v5机箱风扇 三连包 黑白",
+        "price": 54,
+        "quantity": 1,
+        "specs": "ARGB神光同步 cd纹光圈",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766915938717",
+        "name": "棱镜4PROS黑白三连包CD纹",
+        "price": 59,
+        "quantity": 1,
+        "specs": "Argb神光同步",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766916050593",
+        "name": "利民b12015EX 3150转",
+        "price": 83,
+        "quantity": 1,
+        "specs": "高性能风扇 无光",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766916134232",
+        "name": "金河田FM-360三连包风扇黑白正反页",
+        "price": 119,
+        "quantity": 1,
+        "specs": "Argb神光同步",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766923798054",
+        "name": "爱国者棱镜8PRO 黑白",
+        "price": 12,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766923870140",
+        "name": "棱镜8PRO暴风眼  黑白",
+        "price": 10,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true,
+        "isModified": true
+      },
+      {
+        "id": "custom-1766924176564",
+        "name": "棱镜PLUS积木版三联包 黑白",
+        "price": 55,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      },
+      {
+        "id": "custom-1766924271451",
+        "name": "棱镜4PRO三联包 黑白",
+        "price": 66,
+        "quantity": 1,
+        "specs": "ARGB CD光效",
+        "brand": "自定义",
+        "category": "fans",
+        "isCustom": true
+      }
+    ]
+  },
+  "savedConfigs": [
+    {
+      "name": "配置1",
+      "config": {
+        "cpu": null,
+        "motherboard": null,
+        "ram": null,
+        "gpu": null,
+        "cooling": null,
+        "storage": null,
+        "psu": null,
+        "case": null,
+        "fans": null,
+        "other": [
+          {
+            "id": "custom-1765818596652",
+            "name": "Cpu内存超频 系统调试 电竞正版系统激活",
+            "price": 1,
+            "quantity": 1,
+            "specs": "自定义硬件",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          }
+        ]
+      },
+      "timestamp": 1765818661078,
+      "totalPrice": null
+    },
+    {
+      "name": "配置2",
+      "config": {
+        "cpu": {
+          "id": "cpu-6",
+          "name": "AMD Ryzen 7 9800X3D",
+          "price": 3699,
+          "specs": "16核32线程 | 4.2GHz | 128MB缓存 | AM5接口",
+          "brand": "AMD",
+          "category": "cpu"
+        },
+        "motherboard": null,
+        "ram": null,
+        "gpu": null,
+        "cooling": null,
+        "storage": null,
+        "psu": null,
+        "case": null,
+        "fans": null,
+        "other": [
+          {
+            "id": "custom-1765818596652",
+            "name": "Cpu内存超频 系统调试 电竞正版系统激活",
+            "price": 1,
+            "quantity": 1,
+            "specs": "自定义硬件",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          }
+        ]
+      },
+      "timestamp": 1765818670670,
+      "totalPrice": null
+    },
+    {
+      "name": "配置1",
+      "config": {
+        "cpu": {
+          "id": "cpu-9",
+          "name": "AMD Ryzen 5 9600X",
+          "price": 1300,
+          "specs": "12核24线程 | 4.9GHz | 60MB缓存 | AM5接口",
+          "brand": "AMD",
+          "category": "cpu"
+        },
+        "motherboard": null,
+        "ram": null,
+        "gpu": {
+          "id": "custom-1765821825425",
+          "name": "Nvidia 5600",
+          "price": 2222,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "gpu",
+          "isCustom": true
+        },
+        "cooling": {
+          "id": "custom-1765821803793",
+          "name": "泰坦a090",
+          "price": 499,
+          "quantity": 1,
+          "specs": "1",
+          "brand": "自定义",
+          "category": "cooling",
+          "isCustom": true
+        },
+        "storage": {
+          "id": "custom-1765821860319",
+          "name": "西数sn580",
+          "price": 751,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "storage",
+          "isCustom": true
+        },
+        "psu": null,
+        "case": null,
+        "fans": {
+          "id": "custom-1765821882355",
+          "name": "灵境4Pro",
+          "price": 8,
+          "quantity": 6,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "fans",
+          "isCustom": true
+        },
+        "other": [
+          {
+            "id": "custom-1765820000109",
+            "name": "Cpu内存超频 系统调试 电竞正版系统激活",
+            "price": 1,
+            "quantity": 1,
+            "specs": "自定义硬件",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          }
+        ]
+      },
+      "timestamp": 1765821898491,
+      "totalPrice": null
+    },
+    {
+      "name": "配置1",
+      "config": {
+        "cpu": {
+          "id": "custom-1766670417264",
+          "name": "AMD Ryzen 9 9700X",
+          "price": 1659,
+          "quantity": 1,
+          "specs": "8核16线程AM5接口",
+          "brand": "自定义",
+          "category": "cpu",
+          "isCustom": true
+        },
+        "motherboard": {
+          "id": "custom-1766670545035",
+          "name": "微星B650M GAMING WIFI",
+          "price": 685,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "motherboard",
+          "isCustom": true
+        },
+        "ram": {
+          "id": "custom-1766670594928",
+          "name": "雷克沙6000-32",
+          "price": 989,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "ram",
+          "isCustom": true
+        },
+        "gpu": {
+          "id": "custom-1766670639490",
+          "name": "电竞叛客5060",
+          "price": 2323,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "gpu",
+          "isCustom": true
+        },
+        "cooling": {
+          "id": "custom-1765821803793",
+          "name": "泰坦a090",
+          "price": 499,
+          "quantity": 1,
+          "specs": "1",
+          "brand": "自定义",
+          "category": "cooling",
+          "isCustom": true
+        },
+        "storage": {
+          "id": "custom-1765821860319",
+          "name": "西数sn580",
+          "price": 751,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "storage",
+          "isCustom": true
+        },
+        "psu": null,
+        "case": {
+          "id": "custom-1766670779991",
+          "name": "半岛铁盒W6  白",
+          "price": 133,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "case",
+          "isCustom": true
+        },
+        "fans": {
+          "id": "custom-1765821882355",
+          "name": "棱镜4Pro",
+          "price": 8,
+          "quantity": 6,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "fans",
+          "isCustom": true,
+          "isModified": true
+        },
+        "other": [
+          {
+            "id": "custom-1765820000109",
+            "name": "CPU内存超频 系统调试 电竞系统",
+            "price": 1,
+            "quantity": 1,
+            "specs": "正版系统激活",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          },
+          {
+            "id": "custom-1765823414638",
+            "name": "装机加完美走线",
+            "price": 1,
+            "quantity": 1,
+            "specs": "加灯控软件调教",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          }
+        ]
+      },
+      "timestamp": 1766671061134,
+      "totalPrice": null
+    }
+  ],
+  "presetConfigs": [
+    {
+      "id": "preset-1766853795418",
+      "name": "9600",
+      "description": "",
+      "config": {
+        "cpu": {
+          "id": "cpu-9",
+          "name": "AMD Ryzen 5 9600X",
+          "price": 1271,
+          "specs": "6核12线程 | 5.4GHz | 32MB缓存 | AM5接口",
+          "brand": "AMD",
+          "category": "cpu",
+          "isModified": true
+        },
+        "motherboard": {
+          "id": "custom-1766852371190",
+          "name": "微星B650M GAMING WIFI",
+          "price": 699,
+          "quantity": 1,
+          "specs": "MATX",
+          "brand": "自定义",
+          "category": "motherboard",
+          "isCustom": true,
+          "isModified": true
+        },
+        "ram": {
+          "id": "custom-1766832155101",
+          "name": "阿斯加特海拉 6000c36",
+          "price": 999,
+          "quantity": 1,
+          "specs": "24×1  白色无光",
+          "brand": "自定义",
+          "category": "ram",
+          "isCustom": true
+        },
+        "gpu": {
+          "id": "custom-1766671453089",
+          "name": "双敏5050 双风扇  白",
+          "price": 1799,
+          "quantity": 1,
+          "specs": "推荐电源 550W 长230",
+          "brand": "自定义",
+          "category": "gpu",
+          "isCustom": true,
+          "isModified": true
+        },
+        "cooling": {
+          "id": "custom-1766852946536",
+          "name": "瓦尔基里A360 ARGB",
+          "price": 325,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "cooling",
+          "isCustom": true
+        },
+        "storage": {
+          "id": "custom-1766851650904",
+          "name": "金邦PA3 PCIE3.0",
+          "price": 366,
+          "quantity": 1,
+          "specs": "500G",
+          "brand": "自定义",
+          "category": "storage",
+          "isCustom": true
+        },
+        "psu": {
+          "id": "custom-1766670710868",
+          "name": "玄武650k  白",
+          "price": 299,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "psu",
+          "isCustom": true
+        },
+        "case": {
+          "id": "custom-1766853583071",
+          "name": "半岛铁盒 白泽360U",
+          "price": 134,
+          "quantity": 1,
+          "specs": "MATX",
+          "brand": "自定义",
+          "category": "case",
+          "isCustom": true
+        },
+        "fans": {
+          "id": "custom-1765821882355",
+          "name": "棱镜4Pro",
+          "price": 8,
+          "quantity": 6,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "fans",
+          "isCustom": true,
+          "isModified": true
+        },
+        "other": [
+          {
+            "id": "custom-1765820000109",
+            "name": "CPU分核负压超频内存同频分频",
+            "price": 1,
+            "quantity": 1,
+            "specs": "Cpu极限分核数据 内存同频 分频两套数据",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          },
+          {
+            "id": "custom-1766821304245",
+            "name": "Windows10-11电竞系统安装调试",
+            "price": 1,
+            "quantity": 1,
+            "specs": "正版系统激活 驱动补全",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          },
+          {
+            "id": "custom-1765823414638",
+            "name": "装机加完美走线",
+            "price": 1,
+            "quantity": 1,
+            "specs": "加灯控软件调教",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          }
+        ]
+      },
+      "createdAt": "2025-12-27T16:43:15.418Z"
+    },
+    {
+      "id": "preset-1766854404381",
+      "name": "7500f",
+      "description": "",
+      "config": {
+        "cpu": {
+          "id": "custom-1766816675784",
+          "name": "AMD  R5  7500F",
+          "price": 789,
+          "quantity": 1,
+          "specs": "6核心12线程基础频率3.7加速频率5.0 AM4接口",
+          "brand": "自定义",
+          "category": "cpu",
+          "isCustom": true,
+          "isModified": true
+        },
+        "motherboard": {
+          "id": "custom-1766852371190",
+          "name": "微星B650M GAMING WIFI",
+          "price": 699,
+          "quantity": 1,
+          "specs": "MATX",
+          "brand": "自定义",
+          "category": "motherboard",
+          "isCustom": true,
+          "isModified": true
+        },
+        "ram": {
+          "id": "custom-1766832155101",
+          "name": "阿斯加特海拉 6000c36",
+          "price": 999,
+          "quantity": 1,
+          "specs": "24×1  白色无光",
+          "brand": "自定义",
+          "category": "ram",
+          "isCustom": true
+        },
+        "gpu": {
+          "id": "custom-1766670639490",
+          "name": "电竞叛客5060X2W 8G双风扇白色",
+          "price": 2323,
+          "quantity": 1,
+          "specs": "8pin供电接口 长245MM",
+          "brand": "自定义",
+          "category": "gpu",
+          "isCustom": true,
+          "isModified": true
+        },
+        "cooling": {
+          "id": "custom-1766854048442",
+          "name": "利民AX120RSE ARGB 白",
+          "price": 66,
+          "quantity": 1,
+          "specs": "AMD专用",
+          "brand": "自定义",
+          "category": "cooling",
+          "isCustom": true,
+          "isModified": true
+        },
+        "storage": {
+          "id": "custom-1766851650904",
+          "name": "金邦PA3 PCIE3.0",
+          "price": 366,
+          "quantity": 1,
+          "specs": "500G",
+          "brand": "自定义",
+          "category": "storage",
+          "isCustom": true
+        },
+        "psu": {
+          "id": "custom-1766670710868",
+          "name": "玄武650k  白",
+          "price": 299,
+          "quantity": 1,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "psu",
+          "isCustom": true
+        },
+        "case": {
+          "id": "custom-1766853583071",
+          "name": "半岛铁盒 白泽360U  黑白",
+          "price": 134,
+          "quantity": 1,
+          "specs": "MATX",
+          "brand": "自定义",
+          "category": "case",
+          "isCustom": true,
+          "isModified": true
+        },
+        "fans": {
+          "id": "custom-1765821882355",
+          "name": "棱镜4Pro",
+          "price": 8,
+          "quantity": 6,
+          "specs": "自定义硬件",
+          "brand": "自定义",
+          "category": "fans",
+          "isCustom": true,
+          "isModified": true
+        },
+        "other": [
+          {
+            "id": "custom-1765820000109",
+            "name": "CPU分核负压超频内存同频分频",
+            "price": 1,
+            "quantity": 1,
+            "specs": "Cpu极限分核数据 内存同频 分频两套数据",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          },
+          {
+            "id": "custom-1766821304245",
+            "name": "Windows10-11电竞系统安装调试",
+            "price": 1,
+            "quantity": 1,
+            "specs": "正版系统激活 驱动补全",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          },
+          {
+            "id": "custom-1765823414638",
+            "name": "装机加完美走线",
+            "price": 1,
+            "quantity": 1,
+            "specs": "加灯控软件调教",
+            "brand": "自定义",
+            "category": "other",
+            "isCustom": true
+          }
+        ]
+      },
+      "createdAt": "2025-12-27T16:53:24.381Z"
+    }
+  ],
+  "customHardwareData": [
+    {
+      "id": "custom-1765820000109",
+      "name": "CPU分核负压超频内存同频分频",
+      "price": 1,
+      "quantity": 1,
+      "specs": "Cpu极限分核数据 内存同频 分频两套数据",
+      "brand": "自定义",
+      "category": "other",
+      "isCustom": true
+    },
+    {
+      "id": "custom-1765823414638",
+      "name": "装机加完美走线",
+      "price": 1,
+      "quantity": 1,
+      "specs": "加灯控软件调教",
+      "brand": "自定义",
+      "category": "other",
+      "isCustom": true
+    },
+    {
+      "id": "custom-1766821304245",
+      "name": "Windows10-11电竞系统安装调试",
+      "price": 1,
+      "quantity": 1,
+      "specs": "正版系统激活 驱动补全",
+      "brand": "自定义",
+      "category": "other",
+      "isCustom": true
+    },
+    {
+      "id": "custom-1766852015966",
+      "name": "整机质保5年 任何问题直接联系",
+      "price": 1,
+      "quantity": 1,
+      "specs": "专门有售后师傅负责",
+      "brand": "自定义",
+      "category": "other",
+      "isCustom": true
+    }
+  ],
+  "exportTime": "2025-12-30T11:16:48.186Z"
+}
