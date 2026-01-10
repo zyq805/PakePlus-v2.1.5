@@ -2851,16 +2851,82 @@
                 // 确认是否应用预设
                 if (confirm(`确定要应用预设"${preset.name}"吗？这将替换当前的配置。`)) {
                     // 应用预设配置
-                    currentConfig = JSON.parse(JSON.stringify(preset.config)); // 深拷贝预设配置
+                    let newConfig = JSON.parse(JSON.stringify(preset.config)); // 深拷贝预设配置
+                    
+                    // --- 修复逻辑：使用当前硬件数据库的最新价格更新配置 ---
+                    console.log('正在根据当前数据库同步预设价格...');
+                    
+                    // 辅助函数：查找硬件
+                    const findHardware = (category, id) => {
+                        // 1. 在对应分类的标准库中查找
+                        if (hardwareData[category] && Array.isArray(hardwareData[category])) {
+                            const found = hardwareData[category].find(h => h.id === id);
+                            if (found) return found;
+                        }
+                        
+                        // 2. 在自定义硬件库中查找
+                        const foundCustom = customHardwareData.find(h => h.id === id);
+                        if (foundCustom) return foundCustom;
+                        
+                        // 3. 全局查找（作为兜底）
+                        for (const cat in hardwareData) {
+                            if (Array.isArray(hardwareData[cat])) {
+                                const found = hardwareData[cat].find(h => h.id === id);
+                                if (found) return found;
+                            }
+                        }
+                        return null;
+                    };
+
+                    // 遍历配置并更新
+                    Object.keys(newConfig).forEach(key => {
+                        if (key === 'other') {
+                            // 处理其他配件/自定义配件列表
+                            if (Array.isArray(newConfig.other)) {
+                                newConfig.other.forEach((item, idx) => {
+                                    if (item && item.id) {
+                                        const currentHardware = findHardware(item.category || 'other', item.id);
+                                        if (currentHardware) {
+                                            console.log(`同步价格: ${item.name} (${item.price} -> ${currentHardware.price})`);
+                                            // 更新价格和基本信息，保留数量
+                                            newConfig.other[idx].price = currentHardware.price;
+                                            newConfig.other[idx].name = currentHardware.name;
+                                            newConfig.other[idx].specs = currentHardware.specs;
+                                            newConfig.other[idx].brand = currentHardware.brand;
+                                            newConfig.other[idx].originalPrice = currentHardware.price;
+                                        }
+                                    }
+                                });
+                            }
+                        } else {
+                            // 处理标准硬件槽位
+                            const item = newConfig[key];
+                            if (item && item.id) {
+                                const currentHardware = findHardware(key, item.id);
+                                if (currentHardware) {
+                                    console.log(`同步价格: ${item.name} (${item.price} -> ${currentHardware.price})`);
+                                    // 更新信息
+                                    newConfig[key].price = currentHardware.price;
+                                    newConfig[key].name = currentHardware.name;
+                                    newConfig[key].specs = currentHardware.specs;
+                                    newConfig[key].brand = currentHardware.brand;
+                                    newConfig[key].originalPrice = currentHardware.price;
+                                }
+                            }
+                        }
+                    });
+                    
+                    currentConfig = newConfig;
                     
                     // 更新界面
                     renderHardwareList(currentCategory);
                     updateSummary();
+                    saveAppState(); // 保存状态
                     
                     // 关闭模态框
                     closePresetModal();
                     
-                    console.log('预设应用成功:', preset.name);
+                    console.log('预设应用成功 (已同步最新价格):', preset.name);
                 }
             }
         }
