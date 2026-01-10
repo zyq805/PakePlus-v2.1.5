@@ -250,16 +250,6 @@
         "category": "cpu",
         "isCustom": true,
         "isModified": true
-      },
-      {
-        "id": "custom-1767093018968",
-        "name": "1",
-        "price": 1,
-        "quantity": 1,
-        "specs": "1",
-        "brand": "自定义",
-        "category": "cpu",
-        "isCustom": true
       }
     ],
     "motherboard": [
@@ -668,6 +658,30 @@
     ],
     "ram": [
       {
+        "id": "ram-1",
+        "name": "光威天策 DDR5-6400 32GB(16G×2)",
+        "price": 1039,
+        "specs": "DDR5-6400 | CL32 | 16GB×2 | 黑色",
+        "brand": "光威",
+        "category": "ram"
+      },
+      {
+        "id": "ram-2",
+        "name": "海盗船 DDR5 32GB (2x16GB) 6400MHz",
+        "price": 1899,
+        "specs": "DDR5-6400 | CL36 | 16GB×2 | RGB",
+        "brand": "海盗船",
+        "category": "ram"
+      },
+      {
+        "id": "ram-3",
+        "name": "芝奇焰光戟 Z5 Neo RGB DDR5-6000 CL30 32GB",
+        "price": 4299,
+        "specs": "DDR5-6000 | CL30 | 16GB×2 | RGB",
+        "brand": "芝奇",
+        "category": "ram"
+      },
+      {
         "id": "custom-1766670594928",
         "name": "雷克沙6000-32  黑",
         "price": 959,
@@ -994,6 +1008,14 @@
         "brand": "NVIDIA",
         "category": "gpu",
         "isModified": true
+      },
+      {
+        "id": "gpu-2",
+        "name": "NVIDIA RTX 5080 FE",
+        "price": 8299,
+        "specs": "16GB GDDR7 | 12288 CUDA核心 | 2.8GHz",
+        "brand": "NVIDIA",
+        "category": "gpu"
       },
       {
         "id": "gpu-3",
@@ -2664,6 +2686,22 @@
     ],
     "case": [
       {
+        "id": "case-1",
+        "name": "联力 O11 Dynamic EVO",
+        "price": 1299,
+        "specs": "ATX | 钢化玻璃侧透 | 支持360mm水冷",
+        "brand": "联力",
+        "category": "case"
+      },
+      {
+        "id": "case-2",
+        "name": "华硕 ROG Z11",
+        "price": 899,
+        "specs": "Mini-ITX | 钢化玻璃侧透 | 支持240mm水冷",
+        "brand": "华硕",
+        "category": "case"
+      },
+      {
         "id": "custom-1765823863301",
         "name": "星灿蓝",
         "price": 288,
@@ -2897,8 +2935,7 @@
         "category": "fans",
         "isCustom": true
       }
-    ],
-    "other": []
+    ]
   },
   "currentConfig": {
     "cpu": null,
@@ -3163,16 +3200,6 @@
         "category": "cpu",
         "isCustom": true,
         "isModified": true
-      },
-      {
-        "id": "custom-1767093018968",
-        "name": "1",
-        "price": 1,
-        "quantity": 1,
-        "specs": "1",
-        "brand": "自定义",
-        "category": "cpu",
-        "isCustom": true
       }
     ],
     "motherboard": [
@@ -6315,5 +6342,5 @@
       "isCustom": true
     }
   ],
-  "exportTime": "2025-12-30T11:16:48.186Z"
+  "exportTime": "2025-12-28T12:18:18.956Z"
 }
