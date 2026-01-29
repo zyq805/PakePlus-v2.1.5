@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIY装机助手 - 全新版本</title>
-    <!-- 替换为本地加载，如果没有本地文件，则保留 CDN 作为回退 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -29,585 +29,468 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="style.css">
     <style type="text/tailwindcss">
         @layer utilities {
-            .neon-glow {
-                box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            .glow-text {
+                text-shadow: 0 0 10px currentColor;
             }
-            .neon-text {
-                text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            .glow-box {
+                box-shadow: 0 0 15px currentColor;
             }
-            .neon-border {
-                border: 1px solid rgba(0, 212, 255, 0.3);
-                box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+            .clip-corner {
+                clip-path: polygon(
+                    0 10px, 10px 0, 
+                    100% 0, 100% calc(100% - 10px), 
+                    calc(100% - 10px) 100%, 0 100%
+                );
             }
-            .grid-bg {
-                background-image: 
-                    linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-                background-size: 20px 20px;
-                background-position: -1px -1px;
+            .clip-corner-sm {
+                clip-path: polygon(
+                    0 5px, 5px 0, 
+                    100% 0, 100% calc(100% - 5px), 
+                    calc(100% - 5px) 100%, 0 100%
+                );
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
             }
         }
-    </style>
-    <style>
-        /* Force Send Button Display */
-        #send-to-customer {
-            display: inline-flex !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-            z-index: 1000 !important;
+
+        /* Light Theme Overrides */
+        body.light-theme {
+            --primary: #007bff;
+            --primary-dark: #0056b3;
+            --background: #ffffff;
+            --surface: #ffffff;
+            --surface-hover: #f8f9fa;
+            --text: #000000;
+            --text-secondary: #666666;
+            --border: #e0e0e0;
+            background-color: #ffffff !important;
+            background-image: none !important;
+        }
+
+        body.light-theme .grid-bg {
+            background-image: none !important;
+            background-color: #ffffff !important;
+        }
+
+        body.light-theme .neon-text {
+            text-shadow: none;
+            color: #007bff;
+            font-weight: 800;
+        }
+
+        body.light-theme .neon-border {
+            border: 1px solid #dee2e6 !important;
+            box-shadow: none !important;
+        }
+
+        body.light-theme .app-title {
+            background: none;
+            -webkit-text-fill-color: #000000;
+            color: #000000;
+            text-shadow: none !important;
+        }
+
+        body.light-theme .summary-panel {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid #dee2e6 !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
         }
         
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body.light-theme .selected-part-item {
+            background: #ffffff !important;
+            border: 1px solid #eee !important;
+            border-left: 4px solid var(--category-color) !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02) !important;
+        }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body.light-theme .selected-part-item:hover {
+            background: #f8f9fa !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+            transform: translateY(-2px) !important;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--background) 0%, #1a1a2e 100%);
-            color: var(--text);
-            min-height: 100vh;
-            overflow-x: hidden;
+        body.light-theme .part-name {
+            color: #212529 !important;
+            text-shadow: none !important;
+        }
+        
+        body.light-theme .part-price {
+            color: #d97706 !important; /* Dark Gold/Yellow */
+            text-shadow: none !important;
+            font-weight: 800 !important;
+        }
+        
+        body.light-theme #total-price {
+            color: #198754 !important;
+            text-shadow: none !important;
+            font-weight: 800 !important;
+        }
+        
+        body.light-theme .header-bar {
+            background: rgba(255, 255, 255, 0.9) !important;
+            border-bottom: 1px solid #e0e0e0 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
         }
 
-        /* 网格背景 */
-        .grid-bg {
-            background-image: 
-                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            background-position: -1px -1px;
+        body.light-theme .header-stats {
+            background: #ffffff !important;
+            border: none !important;
+            box-shadow: none !important;
         }
 
-        /* 霓虹发光效果 */
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        body.light-theme .stat-box {
+            background: #ffffff !important;
+            border: none !important;
+            box-shadow: none !important;
         }
 
-        .neon-text {
-            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        body.light-theme .stat-box::before {
+            display: none !important;
         }
 
-        .neon-border {
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        body.light-theme .stat-value {
+            color: #007bff !important; /* Blue for count */
+            text-shadow: none !important;
+            font-weight: 800 !important;
         }
 
-        /* 主容器 */
-        .main-container {
-            display: grid;
-            grid-template-columns: 260px 1fr 400px;
-            gap: 20px;
-            height: calc(100vh - 2rem);
-            max-width: 1800px;
-            margin: 0 auto;
-            padding: 1rem;
+        body.light-theme #selected-count {
+            color: #007bff !important; /* Ensure Blue for ID */
         }
 
-        /* 左侧导航 */
-        .sidebar {
-            background: rgba(26, 26, 46, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 20px;
-            height: fit-content;
-            position: sticky;
-            top: 1rem;
+        body.light-theme #total-price {
+            color: #d97706 !important; /* Dark Gold/Yellow */
+            text-shadow: none !important;
+            font-weight: 800 !important;
         }
 
-        .category-nav {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+        body.light-theme .action-btn {
+            background: #f1f3f5 !important;
+            border-color: #dee2e6 !important;
         }
 
-        .category-btn {
-            background: rgba(22, 33, 62, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px 20px;
-            color: var(--text);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        body.light-theme .action-btn svg {
+            stroke: #495057 !important;
+        }
+        
+        body.light-theme .action-btn:hover {
+            background: #e9ecef !important;
+            border-color: #007bff !important;
         }
 
-        .category-btn:hover {
-            background: rgba(22, 33, 62, 0.9);
-            border-color: var(--primary);
-            transform: translateX(5px);
+        body.light-theme .action-btn:hover svg {
+            stroke: #007bff !important;
         }
 
-        .category-btn.active {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-        }
-
-        .category-icon {
-            width: 20px;
-            height: 20px;
-            opacity: 0.8;
-        }
-
-        /* 中间内容区 */
-        .content-area {
-            background: rgba(26, 26, 46, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            overflow-y: auto;
-        }
-
-        .content-header {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .content-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .content-subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        /* 搜索区域 */
-        .search-section {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .search-input {
-            width: 100%;
-            background: rgba(10, 10, 15, 0.8);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 16px 20px;
-            color: var(--text);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
-        }
-
-        /* 硬件列表 */
-        .hardware-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .hardware-card {
-            background: rgba(10, 10, 15, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .hardware-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .hardware-card.selected {
-            border-color: var(--primary);
-            background: rgba(0, 212, 255, 0.05);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-        }
-
-        .hardware-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-
-        .hardware-price {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--success);
-            margin-bottom: 12px;
-        }
-
-        .hardware-specs {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        /* 右侧摘要 */
-        .summary-panel {
-            background: rgba(26, 26, 46, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 20px;
-            height: fit-content;
-            position: sticky;
-            top: 1rem;
-        }
-
-        .summary-header {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .summary-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .total-price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--success);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .selected-parts {
-            margin-bottom: 30px;
-        }
-
-        .selected-part-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(51, 51, 68, 0.5);
-            gap: 12px;
-        }
-
-        .selected-part-item:last-child {
-            border-bottom: none;
-        }
-
-        .part-name {
-            font-size: 0.9rem;
-            color: var(--text);
-        }
-
-        .part-price {
-            font-weight: 600;
-            color: var(--text-secondary);
-        }
-
-        /* 操作按钮 */
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 16px 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        /* 底部按钮样式 */
+        .float-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            background: rgba(20, 20, 30, 0.8);
+            border: 1px solid #333;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .btn-primary:hover {
+        .float-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 14px 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-secondary:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
             border-color: var(--primary);
             color: var(--primary);
         }
 
-        /* 搜索建议面板 */
-        .suggestions-container {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-top: 8px;
-            max-height: 400px;
-            overflow-y: auto;
-            z-index: 1000;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        .float-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Light Theme for Buttons */
+        body.light-theme .float-btn {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            color: #495057;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        body.light-theme .float-btn:hover {
+            border-color: #007bff;
+            color: #007bff;
+            background: #f8f9fa;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Icon Toggling */
+        /* Default (Dark): Show Sun, Hide Moon */
+        #btn-theme-toggle [data-lucide="sun"],
+        #btn-theme-toggle .lucide-sun {
+            display: block;
+        }
+        #btn-theme-toggle [data-lucide="moon"],
+        #btn-theme-toggle .lucide-moon {
             display: none;
         }
 
-        .suggestion-item {
-            padding: 12px 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid rgba(51, 51, 68, 0.3);
-        }
-
-        .suggestion-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-        }
-
-        .suggestion-item:last-child {
-            border-bottom: none;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 1200px) {
-            .main-container {
-                grid-template-columns: 240px 1fr 370px;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                height: auto;
-            }
-            
-            .sidebar, .summary-panel {
-                position: static;
-            }
-            
-            .hardware-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* 自定义滚动条 */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(10, 10, 15, 0.5);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-dark);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary);
-        }
-
-        /* 预设配置模态框 */
-        .preset-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
+        /* Light Theme: Hide Sun, Show Moon */
+        body.light-theme #btn-theme-toggle [data-lucide="sun"],
+        body.light-theme #btn-theme-toggle .lucide-sun {
             display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
         }
-
-        .preset-modal.active {
-            display: flex;
-        }
-
-        .preset-modal-content {
-            background: var(--surface);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .preset-modal-header {
-            padding: 20px 20px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .preset-modal-body {
-            padding: 20px;
-        }
-
-        .preset-modal-footer {
-            padding: 0 20px 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .preset-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .preset-card {
-            background: rgba(10, 10, 15, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .preset-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
-        }
-
-        .preset-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .preset-card-title {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .preset-card-price {
-            color: var(--success);
-            font-weight: 600;
-        }
-
-        .preset-card-specs {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.4;
+        body.light-theme #btn-theme-toggle [data-lucide="moon"],
+        body.light-theme #btn-theme-toggle .lucide-moon {
+            display: block;
         }
     </style>
-    <script>
-        // 登录验证逻辑
-        document.addEventListener('DOMContentLoaded', () => {
-            // 注意：为了满足用户"每当运行"都要输入密码的需求，我们使用sessionStorage
-            // 这样每次打开新的标签页或关闭浏览器后重开，都需要重新输入密码
-            // 刷新页面通常会保留sessionStorage，但为了用户体验，刷新不应频繁要求输入
-            
-            const loginOverlay = document.getElementById('login-overlay');
-            const loginForm = document.getElementById('login-form');
-            const passwordInput = document.getElementById('access-password');
-            
-            // 检查是否已登录
-            if (sessionStorage.getItem('isLoggedIn') === 'true') {
-                loginOverlay.remove();
-                return;
-            }
 
-            // 处理表单提交
-            loginForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const inputPwd = passwordInput.value;
+    <script>
+        // 应用保存的缩放设置
+        function applySavedScales() {
+            const savedSummaryScale = sessionStorage.getItem('summaryScale') || '100';
+            const savedHardwareScale = sessionStorage.getItem('hardwareScale') || '100';
+            
+            // 应用当前配置缩放
+            const summaryPanel = document.querySelector('.summary-panel');
+            if (summaryPanel) {
+                summaryPanel.style.transform = `scale(${savedSummaryScale / 100})`;
+                summaryPanel.style.transformOrigin = 'top left';
+            }
+            
+            // 应用硬件选择区域缩放
+            const contentArea = document.querySelector('.content-area');
+            if (contentArea) {
+                contentArea.style.transform = `scale(${savedHardwareScale / 100})`;
+                contentArea.style.transformOrigin = 'left center';
+            }
+            
+            applyFontSettings();
+            applyHardwareFontSettings();
+        }
+
+        // 全局变量
+        var priceScale = 1.0;
+
+        // 初始化缩放控制
+        function initScaleControls() {
+            const summaryScaleSlider = document.getElementById('summary-scale-slider');
+            const summaryScaleValue = document.getElementById('summary-scale-value');
+            const hardwareScaleSlider = document.getElementById('hardware-scale-slider');
+            const hardwareScaleValue = document.getElementById('hardware-scale-value');
+            const fontSizeSlider = document.getElementById('font-size-slider');
+            const fontSizeValue = document.getElementById('font-size-value');
+            const summaryColsSlider = document.getElementById('summary-cols-slider');
+            const summaryColsValue = document.getElementById('summary-cols-value');
+            const partModelScaleSlider = document.getElementById('part-model-scale-slider');
+            const partModelScaleValue = document.getElementById('part-model-scale-value');
+            const partSpecsScaleSlider = document.getElementById('part-specs-scale-slider');
+            const partSpecsScaleValue = document.getElementById('part-specs-scale-value');
+            const fontSpacingSlider = document.getElementById('font-spacing-slider');
+            const fontSpacingValue = document.getElementById('font-spacing-value');
+            const hardwareFontSizeSlider = document.getElementById('hardware-font-size-slider');
+            const hardwareFontSizeValue = document.getElementById('hardware-font-size-value');
+            const totalPriceScaleSlider = document.getElementById('total-price-scale-slider');
+            const totalPriceScaleValue = document.getElementById('total-price-scale-value');
+            
+            if (!summaryScaleSlider || !hardwareScaleSlider || !fontSizeSlider || !fontSpacingSlider || !hardwareFontSizeSlider || !partModelScaleSlider || !partSpecsScaleSlider || !summaryColsSlider) return;
+            
+            // 设置初始值
+            const savedSummaryScale = sessionStorage.getItem('summaryScale') || '100';
+            const savedHardwareScale = sessionStorage.getItem('hardwareScale') || '90';
+            const savedFontSize = sessionStorage.getItem('fontSize') || '6';
+            const savedSummaryCols = sessionStorage.getItem('summaryCols') || '2';
+            const savedPartModelScale = sessionStorage.getItem('partModelScale') || '1.0';
+            const savedPartSpecsScale = sessionStorage.getItem('partSpecsScale') || '1.5';
+            const savedFontSpacing = sessionStorage.getItem('fontSpacing') || '2';
+            const savedHardwareFontScale = sessionStorage.getItem('hardwareFontScale') || '1.0';
+            const savedTotalPriceScale = parseFloat(sessionStorage.getItem('totalPriceScale') || '1.0');
+            
+            summaryScaleSlider.value = savedSummaryScale;
+            summaryScaleValue.textContent = savedSummaryScale + '%';
+            hardwareScaleSlider.value = savedHardwareScale;
+            hardwareScaleValue.textContent = savedHardwareScale + '%';
+            fontSizeSlider.value = savedFontSize;
+            fontSizeValue.textContent = savedFontSize + 'px';
+            summaryColsSlider.value = savedSummaryCols;
+            summaryColsValue.textContent = savedSummaryCols + '列';
+            partModelScaleSlider.value = savedPartModelScale;
+            partModelScaleValue.textContent = savedPartModelScale + 'x';
+            partSpecsScaleSlider.value = savedPartSpecsScale;
+            partSpecsScaleValue.textContent = savedPartSpecsScale + 'x';
+            fontSpacingSlider.value = savedFontSpacing;
+            fontSpacingValue.textContent = savedFontSpacing + 'px';
+            hardwareFontSizeSlider.value = savedHardwareFontScale;
+            hardwareFontSizeValue.textContent = savedHardwareFontScale + 'x';
+            
+            if (totalPriceScaleSlider) {
+                totalPriceScaleSlider.value = savedTotalPriceScale;
+                totalPriceScaleValue.textContent = savedTotalPriceScale + 'x';
+                priceScale = savedTotalPriceScale;
+            }
+            
+            // 应用设置
+            applyFontSettings();
+            applySummaryCols();
+            applyPartModelSettings();
+            applyPartSpecsSettings();
+            applyHardwareFontSettings();
+            
+            // 当前配置缩放控制
+            summaryScaleSlider.addEventListener('input', function() {
+                const scale = this.value;
+                summaryScaleValue.textContent = scale + '%';
+                sessionStorage.setItem('summaryScale', scale);
                 
-                // 添加加载状态
-                const submitBtn = loginForm.querySelector('button');
-                const originalBtnText = submitBtn.innerText;
-                submitBtn.disabled = true;
-                submitBtn.innerText = '验证中...';
-                
-                try {
-                    // 尝试从配置文件获取密码
-                    // 添加时间戳防止缓存
-                    const response = await fetch('auth_config.json?t=' + new Date().getTime());
-                    
-                    let validPassword = '123456'; // 默认回退密码
-                    
-                    if (response.ok) {
-                        const config = await response.json();
-                        if (config && config.access_code) {
-                            validPassword = config.access_code;
-                        }
-                    } else {
-                        console.warn('无法加载配置文件，使用默认验证逻辑');
-                    }
-                    
-                    // 验证密码
-                    if (inputPwd === validPassword) {
-                        // 登录成功
-                        sessionStorage.setItem('isLoggedIn', 'true');
-                        
-                        // 显示成功状态
-                        submitBtn.innerText = '验证成功';
-                        submitBtn.classList.remove('btn-primary');
-                        submitBtn.classList.add('bg-green-500', 'text-white');
-                        
-                        // 延时进入系统
-                        setTimeout(() => {
-                            loginOverlay.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                            loginOverlay.style.opacity = '0';
-                            loginOverlay.style.transform = 'scale(1.1)';
-                            setTimeout(() => loginOverlay.remove(), 500);
-                        }, 500);
-                    } else {
-                        // 密码错误
-                        throw new Error('密码错误');
-                    }
-                } catch (error) {
-                    console.error('验证失败:', error);
-                    alert('密码错误，请重试！');
-                    passwordInput.value = '';
-                    passwordInput.focus();
-                    
-                    // 恢复按钮状态
-                    submitBtn.disabled = false;
-                    submitBtn.innerText = originalBtnText;
+                const summaryPanel = document.querySelector('.summary-panel');
+                if (summaryPanel) {
+                    summaryPanel.style.transform = `scale(${scale / 100})`;
+                    summaryPanel.style.transformOrigin = 'top left';
                 }
             });
+            
+            // 硬件选择区域缩放控制
+            hardwareScaleSlider.addEventListener('input', function() {
+                const scale = this.value;
+                hardwareScaleValue.textContent = scale + '%';
+                sessionStorage.setItem('hardwareScale', scale);
+                
+                const contentArea = document.querySelector('.content-area');
+                if (contentArea) {
+                    contentArea.style.transform = `scale(${scale / 100})`;
+                    contentArea.style.transformOrigin = 'left center';
+                }
+            });
+            
+            // 字体大小控制
+            fontSizeSlider.addEventListener('input', function() {
+                const size = this.value;
+                fontSizeValue.textContent = size + 'px';
+                sessionStorage.setItem('fontSize', size);
+                applyFontSettings();
+            });
+
+            // 当前配置列数控制
+            summaryColsSlider.addEventListener('input', function() {
+                const cols = this.value;
+                summaryColsValue.textContent = cols + '列';
+                sessionStorage.setItem('summaryCols', cols);
+                applySummaryCols();
+            });
+
+            // 当前配置型号大小控制
+            partModelScaleSlider.addEventListener('input', function() {
+                const scale = this.value;
+                partModelScaleValue.textContent = scale + 'x';
+                sessionStorage.setItem('partModelScale', scale);
+                applyPartModelSettings();
+            });
+
+            // 当前配置详细信息大小控制
+            partSpecsScaleSlider.addEventListener('input', function() {
+                const scale = this.value;
+                partSpecsScaleValue.textContent = scale + 'x';
+                sessionStorage.setItem('partSpecsScale', scale);
+                applyPartSpecsSettings();
+            });
+            
+            // 字体间距控制
+            fontSpacingSlider.addEventListener('input', function() {
+                const spacing = this.value;
+                fontSpacingValue.textContent = spacing + 'px';
+                sessionStorage.setItem('fontSpacing', spacing);
+                applyFontSettings();
+            });
+
+            // 硬件列表字体大小控制
+            hardwareFontSizeSlider.addEventListener('input', function() {
+                const scale = this.value;
+                hardwareFontSizeValue.textContent = scale + 'x';
+                sessionStorage.setItem('hardwareFontScale', scale);
+                applyHardwareFontSettings();
+            });
+
+            // 总金额大小控制
+            if (totalPriceScaleSlider) {
+                totalPriceScaleSlider.addEventListener('input', function() {
+                    const scale = parseFloat(this.value);
+                    totalPriceScaleValue.textContent = scale + 'x';
+                    sessionStorage.setItem('totalPriceScale', scale);
+                    priceScale = scale;
+                    const priceEl = document.getElementById('total-price');
+                    if (priceEl && typeof updatePriceTransform === 'function') {
+                        updatePriceTransform(priceEl);
+                    } else if (priceEl) {
+                         priceEl.style.transform = `scale(${scale})`;
+                    }
+                });
+            }
+        }
+        
+        // 应用字体设置
+        function applyFontSettings() {
+            const savedFontSize = sessionStorage.getItem('fontSize') || '16';
+            const savedFontSpacing = sessionStorage.getItem('fontSpacing') || '2';
+            
+            const summaryPanel = document.querySelector('.summary-panel');
+            if (summaryPanel) {
+                // 计算缩放比例，以16px为基准
+                const scale = parseInt(savedFontSize) / 16;
+                summaryPanel.style.setProperty('--font-scale', scale);
+                summaryPanel.style.letterSpacing = savedFontSpacing + 'px';
+            }
+        }
+
+        // 应用当前配置列数设置
+        function applySummaryCols() {
+            const savedSummaryCols = sessionStorage.getItem('summaryCols') || '2';
+            const selectedParts = document.querySelector('.selected-parts');
+            if (selectedParts) {
+                selectedParts.style.setProperty('--summary-cols', savedSummaryCols);
+            }
+        }
+
+        // 应用当前配置型号大小设置
+        function applyPartModelSettings() {
+            const savedPartModelScale = sessionStorage.getItem('partModelScale') || '1.0';
+            const summaryPanel = document.querySelector('.summary-panel');
+            if (summaryPanel) {
+                summaryPanel.style.setProperty('--part-model-scale', savedPartModelScale);
+            }
+        }
+
+        // 应用当前配置详细信息大小设置
+        function applyPartSpecsSettings() {
+            const savedPartSpecsScale = sessionStorage.getItem('partSpecsScale') || '1.0';
+            const summaryPanel = document.querySelector('.summary-panel');
+            if (summaryPanel) {
+                summaryPanel.style.setProperty('--part-specs-scale', savedPartSpecsScale);
+            }
+        }
+
+        // 应用硬件列表字体设置
+        function applyHardwareFontSettings() {
+            const savedHardwareFontScale = sessionStorage.getItem('hardwareFontScale') || '1.0';
+            const contentArea = document.querySelector('.content-area');
+            if (contentArea) {
+                contentArea.style.setProperty('--hardware-font-scale', savedHardwareFontScale);
+            }
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 页面加载时应用保存的缩放设置
+            applySavedScales();
+            // 初始化缩放控制
+            initScaleControls();
         });
 
         // 备用图标加载方案
@@ -615,20 +498,19 @@
         window.initCalled = false;
         
         function tryLoadLucide() {
-            // Check if lucide is available
             if (typeof lucide !== 'undefined') {
                 console.log('Lucide图标库加载成功');
                 if (typeof init === 'function' && !window.initCalled) {
                     window.initCalled = true;
                     init();
                 }
-            } else if (window.lucideLoadAttempts < 2) { // Reduced attempts to 2
+            } else if (window.lucideLoadAttempts < 2) {
                 window.lucideLoadAttempts++;
                 console.log('尝试重新加载Lucide图标库...', window.lucideLoadAttempts);
-                setTimeout(tryLoadLucide, 200); // Reduced timeout to 200ms
+                setTimeout(tryLoadLucide, 200);
             } else {
                 console.warn('Lucide图标库加载超时，强制初始化...');
-                // Force init anyway
+                // 即使加载失败也初始化
                 if (typeof init === 'function' && !window.initCalled) {
                     window.initCalled = true;
                     init();
@@ -643,717 +525,81 @@
             tryLoadLucide();
         }
     </script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        :root {
-            --primary: #00d4ff;
-            --primary-dark: #0099cc;
-            --secondary: #ff0080;
-            --background: #0a0a0f;
-            --surface: #1a1a2e;
-            --surface-hover: #16213e;
-            --text: #ffffff;
-            --text-secondary: #b0b0b0;
-            --border: #333344;
-            --success: #00ff88;
-            --warning: #ffaa00;
-            --error: #ff4444;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--background) 0%, #1a1a2e 100%);
-            color: var(--text);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* 网格背景 */
-        .grid-bg {
-            background-image: 
-                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            background-position: -1px -1px;
-        }
-
-        /* 霓虹发光效果 */
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-        }
-
-        .neon-text {
-            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-        }
-
-        .neon-border {
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
-        }
-
-        /* 主容器 */
-        .main-container {
-            display: grid;
-            grid-template-columns: 260px 1fr 400px;
-            gap: 20px;
-            height: calc(100vh - 2rem);
-            max-width: 1800px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        /* 左侧导航 */
-        .sidebar {
-            background: rgba(26, 26, 46, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 20px;
-            height: fit-content;
-            position: sticky;
-            top: 1rem;
-        }
-
-        .category-nav {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .category-btn {
-            background: rgba(22, 33, 62, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px 20px;
-            color: var(--text);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .category-btn:hover {
-            background: rgba(22, 33, 62, 0.9);
-            border-color: var(--primary);
-            transform: translateX(5px);
-        }
-
-        .category-btn.active {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-        }
-
-        .category-icon {
-            width: 20px;
-            height: 20px;
-            opacity: 0.8;
-        }
-
-        /* 中间内容区 */
-        .content-area {
-            background: rgba(26, 26, 46, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            overflow-y: auto;
-        }
-
-        .content-header {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .content-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .content-subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        /* 搜索区域 */
-        .search-section {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .search-input {
-            width: 100%;
-            background: rgba(10, 10, 15, 0.8);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 16px 20px;
-            color: var(--text);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
-        }
-
-        /* 硬件列表 */
-        .hardware-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .hardware-card {
-            background: rgba(10, 10, 15, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .hardware-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .hardware-card.selected {
-            border-color: var(--primary);
-            background: rgba(0, 212, 255, 0.05);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-        }
-
-        .hardware-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-
-        .hardware-price {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--success);
-            margin-bottom: 12px;
-        }
-
-        .hardware-specs {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        /* 右侧摘要 */
-        .summary-panel {
-            background: rgba(26, 26, 46, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 20px;
-            height: fit-content;
-            position: sticky;
-            top: 1rem;
-        }
-
-        .summary-header {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .summary-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .total-price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--success);
-            margin-bottom: 20px;
-        }
-
-        .selected-parts {
-            margin-bottom: 30px;
-        }
-
-        .selected-part-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(51, 51, 68, 0.5);
-            gap: 12px;
-        }
-
-        .selected-part-item:last-child {
-            border-bottom: none;
-        }
-
-        .part-name {
-            font-size: 0.9rem;
-            color: var(--text);
-        }
-
-        .part-price {
-            font-weight: 600;
-            color: var(--text-secondary);
-        }
-
-        /* 操作按钮 */
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 16px 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 14px 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* 搜索建议面板 */
-        .suggestions-container {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-top: 8px;
-            max-height: 400px;
-            overflow-y: auto;
-            z-index: 1000;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            display: none;
-        }
-
-        .suggestion-item {
-            padding: 12px 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid rgba(51, 51, 68, 0.3);
-        }
-
-        .suggestion-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-        }
-
-        .suggestion-item:last-child {
-            border-bottom: none;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 1200px) {
-            .main-container {
-                grid-template-columns: 240px 1fr 370px;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                height: auto;
-            }
-            
-            .sidebar, .summary-panel {
-                position: static;
-            }
-            
-            .hardware-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* 自定义滚动条 */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(10, 10, 15, 0.5);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-dark);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary);
-        }
-
-        /* 预设配置模态框 */
-        .preset-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .preset-modal.active {
-            display: flex;
-        }
-
-        .preset-modal-content {
-            background: var(--surface);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .preset-modal-header {
-            padding: 20px 20px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .preset-modal-body {
-            padding: 20px;
-        }
-
-        .preset-modal-footer {
-            padding: 0 20px 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .preset-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .preset-card {
-            background: rgba(10, 10, 15, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .preset-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
-        }
-
-        .preset-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .preset-card-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--primary);
-        }
-
-        .preset-card-price {
-            font-weight: 700;
-            color: var(--success);
-        }
-
-        .preset-card-specs {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-            max-height: 120px;
-            overflow-y: auto;
-        }
-
-        .preset-card-actions {
-            display: flex;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .btn-sm {
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            border-radius: 8px;
-        }
-
-        .btn-danger {
-            background: rgba(255, 68, 68, 0.1);
-            color: var(--error);
-            border: 1px solid var(--error);
-        }
-
-        .btn-danger:hover {
-            background: rgba(255, 68, 68, 0.2);
-        }
-
-        .create-preset-form {
-            display: none;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .create-preset-form.active {
-            display: block;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: var(--text);
-        }
-
-        .form-input {
-            width: 100%;
-            background: rgba(10, 10, 15, 0.8);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 10px 12px;
-            color: var(--text);
-            font-size: 0.9rem;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.1);
-        }
-
-        .form-textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-
-        .form-actions {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body class="grid-bg">
-    <!-- 登录遮罩层 -->
-    <div id="login-overlay" class="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
-        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700 neon-border max-w-sm w-full mx-4 relative overflow-hidden">
-            <!-- 背景装饰 -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-            <div class="absolute -top-10 -right-10 w-20 h-20 bg-cyan-500 blur-[50px] opacity-20"></div>
-            
-            <h2 class="text-2xl font-bold text-center mb-6 neon-text tracking-wider">系统访问验证</h2>
-            <form id="login-form" class="space-y-6">
-                <div>
-                    <label class="block text-sm font-medium mb-2 text-gray-400">请输入访问密码</label>
-                    <div class="relative">
-                        <input type="password" id="access-password" class="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-center tracking-[0.5em] text-lg" placeholder="••••••" required autofocus>
-                        <div class="absolute inset-0 rounded-lg pointer-events-none shadow-[0_0_15px_rgba(0,212,255,0.1)]"></div>
-                    </div>
-                </div>
-                <button type="submit" class="w-full btn-primary py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-cyan-500/30 transition-all duration-300">
-                    解锁系统
-                </button>
-            </form>
-            <p class="text-center text-gray-600 text-xs mt-6">DIY主机配置工具 v1.0</p>
-        </div>
-    </div>
+    <!-- 登录遮罩层已移除 -->
+
 
     <div class="main-container">
-        <!-- 左侧硬件分类导航 -->
-        <aside class="sidebar neon-border">
-            <div class="category-nav">
-                <button class="category-btn active" data-category="cpu">
-                    <i data-lucide="cpu" class="category-icon"></i>
-                    <span>CPU</span>
-                </button>
-                <button class="category-btn" data-category="motherboard">
-                    <i data-lucide="layers" class="category-icon"></i>
-                    <span>主板</span>
-                </button>
-                <button class="category-btn" data-category="ram">
-                    <i data-lucide="memory-stick" class="category-icon"></i>
-                    <span>内存</span>
-                </button>
-                <button class="category-btn" data-category="gpu">
-                    <i data-lucide="monitor-smartphone" class="category-icon"></i>
-                    <span>显卡</span>
-                </button>
-                <button class="category-btn" data-category="cooling">
-                    <i data-lucide="snowflake" class="category-icon"></i>
-                    <span>散热器</span>
-                </button>
-                <button class="category-btn" data-category="storage">
-                    <i data-lucide="hard-drive" class="category-icon"></i>
-                    <span>固态硬盘</span>
-                </button>
-                <button class="category-btn" data-category="psu">
-                    <i data-lucide="zap" class="category-icon"></i>
-                    <span>电源</span>
-                </button>
-                <button class="category-btn" data-category="case">
-                    <i data-lucide="case-sensitive" class="category-icon"></i>
-                    <span>机箱</span>
-                </button>
-                <button class="category-btn" data-category="fans">
-                    <i data-lucide="fan" class="category-icon"></i>
-                    <span>风扇</span>
-                </button>
-                <button class="category-btn" data-category="other">
-                    <i data-lucide="plus-circle" class="category-icon"></i>
-                    <span>其他</span>
-                </button>
+        <!-- 1. 顶部数据栏 (Header) -->
+        <div class="header-bar">
+            <div class="app-branding">
+                <div class="app-title">星梦DIY主机</div>
+                <!-- <div class="app-subtitle">SYSTEM CONFIGURATOR V2.77</div> -->
             </div>
-        </aside>
-
-        <!-- 中间硬件选择区域 -->
-        <main class="content-area neon-border">
-            <div class="content-header">
-                <div class="flex justify-between items-center mb-2">
-                    <h1 class="content-title" id="current-category-title">CPU</h1>
-                    <button class="btn-primary text-sm py-2 px-4" id="add-hardware-btn">
-                        <i data-lucide="plus" class="w-4 h-4 mr-1"></i>
-                        添加新硬件
-                    </button>
+            <div class="header-stats">
+                <div class="stat-box">
+                    <!-- <div class="stat-label">Total Estimate</div> -->
+                    <div class="stat-value" id="total-price">¥0</div>
                 </div>
-                <p class="content-subtitle" id="current-category-description">选择适合您需求的处理器</p>
+                <div class="stat-box">
+                    <!-- <div class="stat-label">Components</div> -->
+                    <div class="stat-value" id="selected-count">0/22</div>
+                </div>
             </div>
+        </div>
+        <!-- Sidebar removed for Customer View -->
 
-            <!-- 搜索区域 -->
-            <div class="search-section">
-                <input type="text" id="hardware-search" class="search-input" placeholder="搜索硬件型号..." autocomplete="off">
-                <div id="search-suggestions" class="suggestions-container"></div>
-            </div>
 
-            <!-- 硬件列表 -->
-            <div class="hardware-grid" id="hardware-list">
-                <!-- 硬件卡片将通过JavaScript动态生成 -->
-            </div>
-        </main>
-
-        <!-- 右侧配置摘要 -->
+        <!-- 中间配置摘要 -->
         <aside class="summary-panel neon-border">
             <div class="summary-header">
-                <div class="flex items-center justify-between">
-                    <h2 class="summary-title neon-text">当前配置</h2>
-                    <div class="flex items-center">
-                        <div class="total-price text-xl font-bold text-green-400 mr-4" id="total-price">
-                            <span id="price-display">¥0</span>
+                <div class="summary-header-top">
+                    <div class="flex items-center gap-4">
+                        <h2 class="summary-title">当前配置</h2>
+                        <div id="price-edit-controls" class="flex gap-2 opacity-50 hover:opacity-100 transition-opacity">
+                            <button id="btn-edit-price" class="text-cyan-400 hover:text-cyan-300 p-1" title="调整价格位置/大小">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m12 16-4-4 4-4"/><path d="m16 12H8"/></svg>
+                            </button>
+                            <button id="btn-save-price" class="text-red-400 hover:text-red-300 p-1 hidden" title="退出编辑">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            </button>
                         </div>
-                        <button id="send-to-customer" class="btn-primary flex items-center px-3 py-1 text-sm" style="background-color: #007bff; border-color: #007bff;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            发送到顾客端
-                        </button>
                     </div>
+                    <div class="total-price" id="total-price">¥0</div>
                 </div>
-                <p class="text-sm text-gray-400">已选择 <span id="selected-count">0</span> 个配件</p>
+                <div class="flex justify-between items-center text-sm text-gray-400">
+                    <p>已选择 <span id="selected-count" class="text-white font-bold">0</span> 个配件</p>
+                    <p class="text-xs opacity-50">直播模式布局</p>
+                </div>
             </div>
 
             <div class="selected-parts" id="selected-parts">
-                <p class="text-center text-gray-400 py-8">暂无选择的配件</p>
             </div>
             
-            <!-- 数据导入导出功能 -->
-            <div class="space-y-4 mb-4">
-                <button class="btn-secondary w-full" id="save-to-local">
-                    <i data-lucide="download" class="w-4 h-4 mr-2"></i>
-                    导出数据文件
-                </button>
-                <label class="btn-secondary w-full cursor-pointer flex items-center justify-center">
-                    <i data-lucide="upload" class="w-4 h-4 mr-2"></i>
-                    导入数据文件
-                    <input type="file" id="import-file" accept=".json" class="hidden">
-                </label>
-            </div>
-            
-            <!-- 预设功能按钮 -->
-            <button class="btn-secondary w-full mb-4" id="preset-btn">
-                <i data-lucide="bookmark" class="w-4 h-4 mr-2"></i>
-                预设配置
-            </button>
+            <!-- 底部功能按钮区 -->
+            <!-- Panel Controls removed for Customer View -->
 
-            <div class="action-buttons">
-                <button class="btn-secondary" id="clear-all">
-                    <i data-lucide="trash-2" class="w-5 h-5"></i>
-                    清空配置
-                </button>
-            </div>
         </aside>
+
+        <!-- Content Area removed for Customer View -->
+
+
+
     </div>
 
-    <!-- 自定义硬件模态框 -->
+    <!-- Bottom Right Controls -->
+    <div id="bottom-controls" class="fixed bottom-6 right-6 flex gap-4 z-50">
+        <button id="btn-theme-toggle" class="float-btn" title="切换主题">
+            <i data-lucide="sun"></i>
+            <i data-lucide="moon"></i>
+        </button>
+        <button id="btn-clear-config" class="float-btn hover:text-red-500 hover:border-red-500" title="清除配置">
+            <i data-lucide="trash-2"></i>
+        </button>
+    </div>
+
+    <!-- Custom Modal restored for Customer View (Hidden) -->
     <div id="custom-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 hidden">
         <div class="bg-gray-900 rounded-2xl p-8 max-w-md w-full mx-4 border border-gray-700 neon-border">
             <div class="flex justify-between items-center mb-6">
@@ -1391,55 +637,13 @@
         </div>
     </div>
 
-    <!-- 预设配置模态框 -->
-    <div id="preset-modal" class="preset-modal">
-        <div class="preset-modal-content neon-border">
-            <div class="preset-modal-header">
-                <div class="flex justify-between items-center">
-                    <h3 class="text-2xl font-bold neon-text">预设配置</h3>
-                    <button id="close-preset-modal" class="text-gray-400 hover:text-white">
-                        <i data-lucide="x" class="h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="preset-modal-body">
-                <div class="flex justify-between items-center mb-4">
-                    <h4 class="text-lg font-medium">已保存的预设</h4>
-                    <button id="create-preset-btn" class="btn-primary text-sm py-1 px-3">
-                        <i data-lucide="plus" class="w-4 h-4 mr-1"></i>
-                        创建新预设
-                    </button>
-                </div>
-                
-                <!-- 预设列表 -->
-                <div id="preset-list" class="preset-list">
-                    <!-- 预设卡片将通过JavaScript动态生成 -->
-                </div>
 
-                <!-- 创建预设表单 -->
-                <div id="create-preset-form" class="create-preset-form">
-                    <form id="preset-form">
-                        <div class="form-group">
-                            <label class="form-label" for="preset-name">预设名称</label>
-                            <input type="text" id="preset-name" class="form-input" placeholder="输入预设名称" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="preset-description">预设描述</label>
-                            <textarea id="preset-description" class="form-input form-textarea" placeholder="输入预设描述（可选）"></textarea>
-                        </div>
-                        <div class="form-actions">
-                            <button type="button" id="cancel-preset" class="btn-secondary btn-sm">取消</button>
-                            <button type="submit" class="btn-primary btn-sm">保存预设</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Preset Modal removed for Customer View -->
 
 
 
-    <!-- 配置编辑模态框 -->
+
+    <!-- Config Edit Modal restored for Customer View (Hidden) -->
     <div id="config-edit-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 hidden">
         <div class="bg-gray-900 rounded-2xl p-8 max-w-md w-full mx-4 border border-gray-700 neon-border">
             <div class="flex justify-between items-center mb-6">
@@ -1478,29 +682,107 @@
         </div>
     </div>
 
+
     <script>
+        // Customer View Listener
         // 初始化 WebSocket 连接
-        // 使用当前页面主机名，端口假设为 3001 (或者与当前页面一致，如果当前就是 3001)
-        // 这里的 server.js 运行在 3001，所以可以直接连接
         const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
         const wsHost = window.location.hostname;
-        const wsPort = '3001'; // 明确指定端口，因为页面可能不是从 3001 访问的（如果是文件打开），但这里假设是通过 server.js 访问
+        const wsPort = '3001';
         const wsUrl = `${wsProtocol}//${wsHost}:${wsPort}`;
         
-        console.log('Connecting to WebSocket:', wsUrl);
+        console.log('Customer Connecting to WebSocket:', wsUrl);
         const ws = new WebSocket(wsUrl);
 
         ws.onopen = () => {
-            console.log('Merchant WebSocket Connected');
-        };
-
-        ws.onmessage = (event) => {
-             console.log('Merchant received message:', event.data);
+            console.log('Customer WebSocket Connected');
         };
         
-        ws.onerror = (error) => {
-            console.error('WebSocket Error:', error);
+        ws.onmessage = (event) => {
+            console.log('Customer received message (raw):', event.data);
+            try {
+                // 如果是字符串，尝试解析
+                let data = event.data;
+                if (typeof data === 'string') {
+                    // 尝试解析 JSON
+                    try {
+                        data = JSON.parse(data);
+                    } catch (e) {
+                        // 如果不是 JSON，就按原样处理（虽然这里预期是 JSON）
+                        console.log('Received non-JSON message');
+                    }
+                }
+                
+                if (data && data.type === 'updateConfig') {
+                    console.log('Processing config update:', data.config);
+                    currentConfig = data.config;
+                    updateSummary();
+                    
+                    // Persistence: Save to LocalStorage
+                    localStorage.setItem('customerCurrentConfig', JSON.stringify(currentConfig));
+                }
+            } catch (error) {
+                console.error('Error processing message:', error);
+            }
         };
+
+        ws.onerror = (error) => {
+            console.error('Customer WebSocket Error:', error);
+        };
+        
+        // --- Persistence & Theme Logic ---
+        
+        // Load saved config and theme on startup
+        document.addEventListener('DOMContentLoaded', () => {
+             // 1. Load Theme
+             const savedTheme = localStorage.getItem('appTheme') || 'dark';
+             if (savedTheme === 'light') {
+                 document.body.classList.add('light-theme');
+             }
+             
+             // 2. Load Config
+             const savedConfig = localStorage.getItem('customerCurrentConfig');
+             if (savedConfig) {
+                 try {
+                     currentConfig = JSON.parse(savedConfig);
+                     updateSummary();
+                     console.log('Restored saved config from LocalStorage');
+                 } catch (e) {
+                     console.error('Failed to restore config:', e);
+                 }
+             }
+             
+             // 3. Setup Button Listeners
+             setupHeaderButtons();
+        });
+        
+        function setupHeaderButtons() {
+            // Theme Toggle
+            const themeBtn = document.getElementById('btn-theme-toggle');
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => {
+                    document.body.classList.toggle('light-theme');
+                    const currentTheme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+                    localStorage.setItem('appTheme', currentTheme);
+                });
+            }
+            
+            // Clear Config
+            const clearBtn = document.getElementById('btn-clear-config');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    // Clear config object
+                    currentConfig = {
+                        cpu: null, motherboard: null, ram: null, gpu: null,
+                        cooling: null, storage: null, psu: null, case: null,
+                        fans: null, other: []
+                    };
+                    updateSummary();
+                    // Clear persistence
+                    localStorage.removeItem('customerCurrentConfig');
+                });
+            }
+        }
 
         // 硬件数据库
         let hardwareData = {
@@ -1860,16 +1142,16 @@
                 // 2. 加载自定义配件数据
                 loadCustomHardwareData();
 
-                // 3. 加载上次的配置单（记忆功能）
-                const savedConfig = localStorage.getItem('savedCurrentConfig');
-                if (savedConfig) {
-                    try {
-                        currentConfig = JSON.parse(savedConfig);
-                        console.log('已恢复上次的配置单');
-                    } catch (e) {
-                        console.error('解析上次配置单失败', e);
-                    }
-                }
+                // 3. 加载上次的配置单（记忆功能） - Skipped for Customer View to start blank
+                // const savedConfig = localStorage.getItem('savedCurrentConfig');
+                // if (savedConfig) {
+                //     try {
+                //         currentConfig = JSON.parse(savedConfig);
+                //         console.log('已恢复上次的配置单');
+                //     } catch (e) {
+                //         console.error('解析上次配置单失败', e);
+                //     }
+                // }
                 
                 // 确保硬件数据库存在
                 if (typeof hardwareData === 'undefined') {
@@ -1888,16 +1170,20 @@
                 console.log('数据加载完成');
                 
                 // 设置事件监听器
-                setupCategoryNavigation();
-                setupSearchFunctionality();
+                // setupCategoryNavigation();
+                // setupSearchFunctionality();
                 setupModalListeners();
-                setupButtonListeners();
-                setupPresetListeners();
+                // setupButtonListeners();
+                // setupPresetListeners();
+                
+                // 初始化缩放控制
+                // initScaleControls();
+                // initPriceEditor();
                 
                 console.log('事件监听器设置完成');
                 
                 // 立即加载CPU分类
-                loadCategory('cpu');
+                // loadCategory('cpu');
                 updateSummary();
                 
                 console.log('应用初始化完成');
@@ -2256,38 +1542,55 @@
         // 设置模态框监听器
         function setupModalListeners() {
             // 关闭模态框
-            document.getElementById('close-modal').addEventListener('click', closeModal);
-            document.getElementById('cancel-custom').addEventListener('click', closeModal);
+            const closeModalBtn = document.getElementById('close-modal');
+            if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+            
+            const cancelCustomBtn = document.getElementById('cancel-custom');
+            if (cancelCustomBtn) cancelCustomBtn.addEventListener('click', closeModal);
             
             // 自定义表单提交
-            document.getElementById('custom-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                console.log('自定义表单已提交');
-                addCustomHardware();
-            });
+            const customForm = document.getElementById('custom-form');
+            if (customForm) {
+                customForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    console.log('自定义表单已提交');
+                    addCustomHardware();
+                });
+            }
 
             // 添加直接的添加按钮事件监听
-            document.getElementById('add-hardware-btn').addEventListener('click', () => {
-                console.log('添加硬件按钮被点击');
-                showAddHardwareModal(currentCategory);
-            });
-
-
+            const addHardwareBtn = document.getElementById('add-hardware-btn');
+            if (addHardwareBtn) {
+                addHardwareBtn.addEventListener('click', () => {
+                    console.log('添加硬件按钮被点击');
+                    showAddHardwareModal(currentCategory);
+                });
+            }
 
             // 配置编辑模态框
-            document.getElementById('close-config-edit-modal').addEventListener('click', () => {
-                document.getElementById('config-edit-modal').classList.add('hidden');
-            });
-            document.getElementById('cancel-config-edit').addEventListener('click', () => {
-                document.getElementById('config-edit-modal').classList.add('hidden');
-            });
+            const closeConfigEditBtn = document.getElementById('close-config-edit-modal');
+            if (closeConfigEditBtn) {
+                closeConfigEditBtn.addEventListener('click', () => {
+                    document.getElementById('config-edit-modal').classList.add('hidden');
+                });
+            }
+            
+            const cancelConfigEditBtn = document.getElementById('cancel-config-edit');
+            if (cancelConfigEditBtn) {
+                cancelConfigEditBtn.addEventListener('click', () => {
+                    document.getElementById('config-edit-modal').classList.add('hidden');
+                });
+            }
 
             // 配置编辑表单提交
-            document.getElementById('config-edit-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                console.log('配置编辑表单已提交');
-                saveConfigEdit();
-            });
+            const configEditForm = document.getElementById('config-edit-form');
+            if (configEditForm) {
+                configEditForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    console.log('配置编辑表单已提交');
+                    saveConfigEdit();
+                });
+            }
         }
 
         // 显示添加硬件模态框
@@ -2658,58 +1961,6 @@
         function setupButtonListeners() {
             console.log('设置按钮监听器');
             
-            // Manual Send to Customer Listener
-            const sendButton = document.getElementById('send-to-customer');
-            if (sendButton) {
-                sendButton.addEventListener('click', function() {
-                    console.log('发送配置到顾客端');
-                    const btn = this;
-                    const originalContent = btn.innerHTML;
-                    
-                    try {
-                        // Add loading effect
-                        btn.style.opacity = '0.7';
-                        btn.innerHTML = '<i data-lucide="loader-2" class="w-3 h-3 mr-1 inline animate-spin"></i> 发送中...';
-                        if (typeof lucide !== 'undefined') lucide.createIcons();
-                        
-                        // Send config
-                        if (ws && ws.readyState === WebSocket.OPEN) {
-                            ws.send(JSON.stringify({
-                                type: 'updateConfig',
-                                config: currentConfig
-                            }));
-                        } else {
-                            console.error('WebSocket is not connected');
-                            throw new Error('通信频道未连接');
-                        }
-                        
-                        // Show success feedback
-                        setTimeout(() => {
-                            btn.style.opacity = '1';
-                            btn.innerHTML = '<i data-lucide="check" class="w-3 h-3 mr-1 inline"></i> 已发送';
-                            if (typeof lucide !== 'undefined') lucide.createIcons();
-                            
-                            setTimeout(() => {
-                                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> 发送到顾客端';
-                                if (typeof lucide !== 'undefined') lucide.createIcons();
-                            }, 2000);
-                        }, 500);
-                    } catch (error) {
-                        console.error('发送失败:', error);
-                        btn.style.opacity = '1';
-                        btn.innerHTML = '<i data-lucide="alert-circle" class="w-3 h-3 mr-1 inline"></i> 发送失败';
-                        if (typeof lucide !== 'undefined') lucide.createIcons();
-                        
-                        setTimeout(() => {
-                            btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> 发送到顾客端';
-                            if (typeof lucide !== 'undefined') lucide.createIcons();
-                        }, 2000);
-                    }
-                });
-            } else {
-                console.error('发送按钮未找到');
-            }
-
             // 清空配置
             const clearButton = document.getElementById('clear-all');
             if (clearButton) {
@@ -2769,6 +2020,16 @@
                 closePresetModal();
             });
             
+            // 点击背景关闭
+            const presetModal = document.getElementById('preset-modal');
+            if (presetModal) {
+                presetModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closePresetModal();
+                    }
+                });
+            }
+            
             // 创建预设按钮点击事件
             document.getElementById('create-preset-btn').addEventListener('click', function() {
                 console.log('创建预设按钮被点击');
@@ -2794,6 +2055,7 @@
             document.getElementById('preset-modal').classList.add('active');
             renderPresetList();
             hideCreatePresetForm();
+            setTimeout(() => lucide.createIcons(), 0); /* 确保图标渲染 */
         }
 
         // 关闭预设模态框
@@ -3040,11 +2302,167 @@
             }
         }
 
+        let isPriceEditMode = false;
+        // priceScale is global now
+
+        function initPriceEditor() {
+            const btnEdit = document.getElementById('btn-edit-price');
+            const btnSave = document.getElementById('btn-save-price');
+            const priceEl = document.getElementById('total-price');
+            
+            if (!btnEdit || !btnSave || !priceEl) return;
+            
+            // Load saved settings
+            const savedPos = JSON.parse(sessionStorage.getItem('totalPricePos') || 'null');
+            const savedScale = parseFloat(sessionStorage.getItem('totalPriceScale') || '1.0');
+            
+            if (savedPos) {
+                priceEl.style.position = 'absolute';
+                priceEl.style.left = savedPos.x + 'px';
+                priceEl.style.top = savedPos.y + 'px';
+                priceEl.style.transform = 'none'; 
+            }
+            if (savedScale !== 1.0) {
+                priceScale = savedScale;
+                updatePriceTransform(priceEl);
+            }
+            
+            btnEdit.addEventListener('click', () => {
+                togglePriceEditMode(true);
+            });
+            
+            btnSave.addEventListener('click', () => {
+                togglePriceEditMode(false);
+            });
+            
+            // Drag logic
+            let isDragging = false;
+            let startX, startY, initialLeft, initialTop;
+            
+            priceEl.addEventListener('mousedown', (e) => {
+                if (!isPriceEditMode) return;
+                isDragging = true;
+                priceEl.style.cursor = 'grabbing';
+                
+                // Ensure absolute positioning relative to nearest positioned ancestor (summary-header-top)
+                if (window.getComputedStyle(priceEl).position !== 'absolute') {
+                    // Switch to absolute while maintaining current visual position
+                    const rect = priceEl.getBoundingClientRect();
+                    const parent = priceEl.offsetParent || document.body;
+                    const parentRect = parent.getBoundingClientRect();
+                    
+                    priceEl.style.position = 'absolute';
+                    priceEl.style.left = (rect.left - parentRect.left) + 'px';
+                    priceEl.style.top = (rect.top - parentRect.top) + 'px';
+                    priceEl.style.margin = '0'; // Clear margins that might affect pos
+                }
+                
+                startX = e.clientX;
+                startY = e.clientY;
+                initialLeft = parseFloat(priceEl.style.left) || 0;
+                initialTop = parseFloat(priceEl.style.top) || 0;
+                
+                e.preventDefault();
+            });
+            
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                priceEl.style.left = (initialLeft + dx) + 'px';
+                priceEl.style.top = (initialTop + dy) + 'px';
+            });
+            
+            window.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    priceEl.style.cursor = 'grab';
+                    // Save pos
+                    const pos = {
+                        x: parseFloat(priceEl.style.left),
+                        y: parseFloat(priceEl.style.top)
+                    };
+                    sessionStorage.setItem('totalPricePos', JSON.stringify(pos));
+                }
+            });
+            
+            // Wheel Scale logic
+            priceEl.addEventListener('wheel', (e) => {
+                if (!isPriceEditMode) return;
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? -0.1 : 0.1;
+                priceScale = Math.max(0.5, Math.min(5.0, priceScale + delta));
+                priceScale = Math.round(priceScale * 10) / 10; // Round to match slider
+                
+                updatePriceTransform(priceEl);
+                sessionStorage.setItem('totalPriceScale', priceScale);
+                
+                // Sync slider
+                const slider = document.getElementById('total-price-scale-slider');
+                const label = document.getElementById('total-price-scale-value');
+                if (slider) slider.value = priceScale;
+                if (label) label.textContent = priceScale + 'x';
+            });
+        }
+        
+        function updatePriceTransform(el) {
+            // Apply scale. Note: font-size scaling is already applied via CSS variables.
+            // This is an EXTRA transform scale.
+            el.style.transform = `scale(${priceScale})`;
+        }
+
+        function togglePriceEditMode(active) {
+            isPriceEditMode = active;
+            const btnEdit = document.getElementById('btn-edit-price');
+            const btnSave = document.getElementById('btn-save-price');
+            const priceEl = document.getElementById('total-price');
+            
+            if (active) {
+                btnEdit.classList.add('hidden');
+                btnSave.classList.remove('hidden');
+                priceEl.style.cursor = 'grab';
+                priceEl.style.border = '1px dashed #00d4ff';
+                priceEl.style.zIndex = '100';
+                priceEl.title = "拖动移动，滚轮缩放";
+            } else {
+                btnEdit.classList.remove('hidden');
+                btnSave.classList.add('hidden');
+                priceEl.style.cursor = 'default';
+                priceEl.style.border = 'none';
+                priceEl.style.zIndex = '';
+                priceEl.title = "";
+            }
+        }
+
+        // 百度搜索硬件 (百度图片)
+        function searchHardwareOnBaidu(name) {
+            if (!name) return;
+            // 直接跳转百度图片搜索
+            const url = 'https://image.baidu.com/search/index?tn=baiduimage&word=' + encodeURIComponent(name);
+            window.open(url, '_blank');
+        }
+
+        // 获取分类颜色
+        function getCategoryColor(category) {
+            const colorMap = {
+                cpu: '#ff3333',         // 红色
+                motherboard: '#ffaa00', // 橙色
+                ram: '#00ff88',         // 绿色
+                gpu: '#00d4ff',         // 蓝色
+                cooling: '#0099cc',     // 深蓝
+                storage: '#aa00ff',     // 紫色
+                psu: '#ff0080',         // 粉色
+                case: '#eeeeee',        // 白色
+                fans: '#b0b0b0',        // 灰色
+                other: '#888888'        // 深灰
+            };
+            return colorMap[category] || '#444';
+        }
+
         // 更新摘要
         function updateSummary() {
             const selectedParts = document.getElementById('selected-parts');
-            // Change: Select the price display span instead of the container
-            const totalPriceElement = document.getElementById('price-display') || document.getElementById('total-price');
+            const totalPriceElement = document.getElementById('total-price');
             const selectedCountElement = document.getElementById('selected-count');
             
             // 获取所有已选配件
@@ -3075,26 +2493,27 @@
             totalPriceElement.textContent = `¥${totalPrice.toLocaleString()}`;
             
             if (selectedItems.length === 0) {
-                selectedParts.innerHTML = '<p class="text-center text-gray-400 py-8">暂无选择的配件</p>';
+                selectedParts.innerHTML = '';
             } else {
                 selectedParts.innerHTML = selectedItems.map((item, index) => `
-                    <div class="selected-part-item py-2 border-b border-gray-700/30 text-sm relative">
-                        <div class="pr-24">
-                            <div class="flex items-center">
-                                <div class="font-medium text-white truncate">${item.name}</div>
-                                ${item.category !== 'other' ? `<span class="text-xs text-gray-400 ml-2 opacity-80 whitespace-nowrap">${getCategoryName(item.category)}</span>` : ''}
-                            </div>
-                            ${item.specs ? `<div class="text-xs text-gray-300 mt-1 whitespace-nowrap overflow-hidden text-ellipsis">${item.specs}</div>` : ''}
+                    <div class="selected-part-item" style="--category-color: ${getCategoryColor(item.category)}">
+                        <div class="part-info">
+                            <div class="part-name" title="${item.name}">${item.name}</div>
+                            <div class="part-specs" title="${item.specs || ''}">${item.category !== 'other' ? getCategoryName(item.category) + ' | ' : ''}${item.specs || '无规格描述'}</div>
                         </div>
-                        <div class="absolute right-0 top-2 text-right w-24">
-                            <div class="font-semibold text-green-400 text-sm">¥${(item.price * (item.quantity || 1)).toLocaleString()}</div>
-                            <div class="text-xs text-gray-500">x${item.quantity || 1}</div>
-                            <div class="flex gap-1 mt-1 justify-end">
-                                <button class="text-gray-400 hover:text-primary" onclick="editConfigItem('${item.category}', '${item.id}')" title="编辑">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3 h-3"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                        <div class="part-meta">
+                            <div class="part-price">¥${(item.price * (item.quantity || 1)).toLocaleString()}</div>
+                            ${(item.quantity || 1) > 1 ? `<div class="part-quantity">x${item.quantity}</div>` : ''}
+                            
+                            <div class="part-actions">
+                                <button class="action-btn search-btn" onclick="searchHardwareOnBaidu('${item.name}')" title="百度搜索" style="color: #fff;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                                 </button>
-                                <button class="text-gray-400 hover:text-red-400" onclick="removeFromConfig('${item.category}', '${item.id}')" title="删除">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3 h-3"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+                                <button class="action-btn edit-btn" onclick="editConfigItem('${item.category}', '${item.id}')" title="编辑" style="color: #00d4ff;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                                </button>
+                                <button class="action-btn delete-btn" onclick="removeFromConfig('${item.category}', '${item.id}')" title="删除" style="color: #ff4444;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
                                 </button>
                             </div>
                         </div>
@@ -3298,6 +2717,19 @@
                 savedConfigs: JSON.parse(localStorage.getItem('pcConfigs') || '[]'),
                 presetConfigs: presetConfigs,
                 customHardwareData: customHardwareData,
+                // 导出界面设置
+                settings: {
+                    summaryScale: sessionStorage.getItem('summaryScale'),
+                    hardwareScale: sessionStorage.getItem('hardwareScale'),
+                    fontSize: sessionStorage.getItem('fontSize'),
+                    summaryCols: sessionStorage.getItem('summaryCols'),
+                    partModelScale: sessionStorage.getItem('partModelScale'),
+                    partSpecsScale: sessionStorage.getItem('partSpecsScale'),
+                    fontSpacing: sessionStorage.getItem('fontSpacing'),
+                    hardwareFontScale: sessionStorage.getItem('hardwareFontScale'),
+                    totalPricePos: sessionStorage.getItem('totalPricePos'),
+                    totalPriceScale: sessionStorage.getItem('totalPriceScale')
+                },
                 exportTime: new Date().toISOString()
             };
             
@@ -3408,9 +2840,15 @@
                                 });
                             }
                             
-                            // 3. 恢复预设配置
+                            // 3. 恢复预设配置 (智能合并)
                             if (importData.presetConfigs) {
-                                presetConfigs = JSON.parse(JSON.stringify(importData.presetConfigs));
+                                const importedPresets = importData.presetConfigs;
+                                // 简单合并：如果ID不同则添加
+                                importedPresets.forEach(importedPreset => {
+                                    if (!presetConfigs.some(p => p.id === importedPreset.id)) {
+                                        presetConfigs.push(importedPreset);
+                                    }
+                                });
                                 savePresetConfigs();
                             }
                             
@@ -3418,6 +2856,23 @@
                             if (importData.customHardwareData) {
                                 customHardwareData = JSON.parse(JSON.stringify(importData.customHardwareData));
                             }
+
+                            // 5. 恢复界面设置 (已禁用：根据用户要求，导入时不覆盖界面设置)
+                            /*
+                            if (importData.settings) {
+                                const s = importData.settings;
+                                if (s.summaryScale) sessionStorage.setItem('summaryScale', s.summaryScale);
+                                if (s.hardwareScale) sessionStorage.setItem('hardwareScale', s.hardwareScale);
+                                if (s.fontSize) sessionStorage.setItem('fontSize', s.fontSize);
+                                if (s.summaryCols) sessionStorage.setItem('summaryCols', s.summaryCols);
+                                if (s.partModelScale) sessionStorage.setItem('partModelScale', s.partModelScale);
+                                if (s.partSpecsScale) sessionStorage.setItem('partSpecsScale', s.partSpecsScale);
+                                if (s.fontSpacing) sessionStorage.setItem('fontSpacing', s.fontSpacing);
+                                if (s.hardwareFontScale) sessionStorage.setItem('hardwareFontScale', s.hardwareFontScale);
+                                if (s.totalPricePos) sessionStorage.setItem('totalPricePos', s.totalPricePos);
+                                if (s.totalPriceScale) sessionStorage.setItem('totalPriceScale', s.totalPriceScale);
+                            }
+                            */
                             
                             // 关键：保存应用状态（全量保存）
                             saveAppState();
