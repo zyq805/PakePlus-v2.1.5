@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIY装机助手 - 全新版本</title>
+    <!-- 替换为本地加载，如果没有本地文件，则保留 CDN 作为回退 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -50,6 +51,14 @@
         }
     </style>
     <style>
+        /* Force Send Button Display */
+        #send-to-customer {
+            display: inline-flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            z-index: 1000 !important;
+        }
+        
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
         * {
@@ -280,6 +289,9 @@
             font-weight: 700;
             color: var(--success);
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .selected-parts {
@@ -603,20 +615,20 @@
         window.initCalled = false;
         
         function tryLoadLucide() {
+            // Check if lucide is available
             if (typeof lucide !== 'undefined') {
                 console.log('Lucide图标库加载成功');
                 if (typeof init === 'function' && !window.initCalled) {
                     window.initCalled = true;
                     init();
                 }
-                // 已经在init中调用了createIcons，这里不需要再次调用
-            } else if (window.lucideLoadAttempts < 5) {
+            } else if (window.lucideLoadAttempts < 2) { // Reduced attempts to 2
                 window.lucideLoadAttempts++;
                 console.log('尝试重新加载Lucide图标库...', window.lucideLoadAttempts);
-                setTimeout(tryLoadLucide, 500);
+                setTimeout(tryLoadLucide, 200); // Reduced timeout to 200ms
             } else {
-                console.error('Lucide图标库加载失败，请检查网络连接。正在强制初始化应用...');
-                // 即使加载失败也初始化
+                console.warn('Lucide图标库加载超时，强制初始化...');
+                // Force init anyway
                 if (typeof init === 'function' && !window.initCalled) {
                     window.initCalled = true;
                     init();
@@ -1296,7 +1308,15 @@
             <div class="summary-header">
                 <div class="flex items-center justify-between">
                     <h2 class="summary-title neon-text">当前配置</h2>
-                    <div class="total-price text-xl font-bold text-green-400" id="total-price">¥0</div>
+                    <div class="flex items-center">
+                        <div class="total-price text-xl font-bold text-green-400 mr-4" id="total-price">
+                            <span id="price-display">¥0</span>
+                        </div>
+                        <button id="send-to-customer" class="btn-primary flex items-center px-3 py-1 text-sm" style="background-color: #007bff; border-color: #007bff;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            发送到顾客端
+                        </button>
+                    </div>
                 </div>
                 <p class="text-sm text-gray-400">已选择 <span id="selected-count">0</span> 个配件</p>
             </div>
@@ -1459,6 +1479,29 @@
     </div>
 
     <script>
+        // 初始化 WebSocket 连接
+        // 使用当前页面主机名，端口假设为 3001 (或者与当前页面一致，如果当前就是 3001)
+        // 这里的 server.js 运行在 3001，所以可以直接连接
+        const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const wsHost = window.location.hostname;
+        const wsPort = '3001'; // 明确指定端口，因为页面可能不是从 3001 访问的（如果是文件打开），但这里假设是通过 server.js 访问
+        const wsUrl = `${wsProtocol}//${wsHost}:${wsPort}`;
+        
+        console.log('Connecting to WebSocket:', wsUrl);
+        const ws = new WebSocket(wsUrl);
+
+        ws.onopen = () => {
+            console.log('Merchant WebSocket Connected');
+        };
+
+        ws.onmessage = (event) => {
+             console.log('Merchant received message:', event.data);
+        };
+        
+        ws.onerror = (error) => {
+            console.error('WebSocket Error:', error);
+        };
+
         // 硬件数据库
         let hardwareData = {
             cpu: [
@@ -2615,6 +2658,58 @@
         function setupButtonListeners() {
             console.log('设置按钮监听器');
             
+            // Manual Send to Customer Listener
+            const sendButton = document.getElementById('send-to-customer');
+            if (sendButton) {
+                sendButton.addEventListener('click', function() {
+                    console.log('发送配置到顾客端');
+                    const btn = this;
+                    const originalContent = btn.innerHTML;
+                    
+                    try {
+                        // Add loading effect
+                        btn.style.opacity = '0.7';
+                        btn.innerHTML = '<i data-lucide="loader-2" class="w-3 h-3 mr-1 inline animate-spin"></i> 发送中...';
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                        
+                        // Send config
+                        if (ws && ws.readyState === WebSocket.OPEN) {
+                            ws.send(JSON.stringify({
+                                type: 'updateConfig',
+                                config: currentConfig
+                            }));
+                        } else {
+                            console.error('WebSocket is not connected');
+                            throw new Error('通信频道未连接');
+                        }
+                        
+                        // Show success feedback
+                        setTimeout(() => {
+                            btn.style.opacity = '1';
+                            btn.innerHTML = '<i data-lucide="check" class="w-3 h-3 mr-1 inline"></i> 已发送';
+                            if (typeof lucide !== 'undefined') lucide.createIcons();
+                            
+                            setTimeout(() => {
+                                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> 发送到顾客端';
+                                if (typeof lucide !== 'undefined') lucide.createIcons();
+                            }, 2000);
+                        }, 500);
+                    } catch (error) {
+                        console.error('发送失败:', error);
+                        btn.style.opacity = '1';
+                        btn.innerHTML = '<i data-lucide="alert-circle" class="w-3 h-3 mr-1 inline"></i> 发送失败';
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                        
+                        setTimeout(() => {
+                            btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> 发送到顾客端';
+                            if (typeof lucide !== 'undefined') lucide.createIcons();
+                        }, 2000);
+                    }
+                });
+            } else {
+                console.error('发送按钮未找到');
+            }
+
             // 清空配置
             const clearButton = document.getElementById('clear-all');
             if (clearButton) {
@@ -2948,7 +3043,8 @@
         // 更新摘要
         function updateSummary() {
             const selectedParts = document.getElementById('selected-parts');
-            const totalPriceElement = document.getElementById('total-price');
+            // Change: Select the price display span instead of the container
+            const totalPriceElement = document.getElementById('price-display') || document.getElementById('total-price');
             const selectedCountElement = document.getElementById('selected-count');
             
             // 获取所有已选配件
